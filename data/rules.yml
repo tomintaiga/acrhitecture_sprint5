@@ -15,10 +15,6 @@ rules:
       - intent: запрос_помощи
       - action: utter_help
 
-  - rule: Информация о проекте
-    steps:
-      - intent: описание_архитектуры
-      - action: action_project_info
 
   - rule: Выбор технологии
     steps:
@@ -28,7 +24,7 @@ rules:
   - rule: Микросервисная архитектура
     steps:
       - intent: микросервисы
-      - action: action_microservice_info
+      - action: utter_microservices
 
   - rule: Архитектурные паттерны
     steps:
@@ -73,7 +69,7 @@ rules:
   - rule: Обеспечение отказоустойчивости
     steps:
       - intent: отказоустойчивость
-      - action: action_resilience_info
+      - action: utter_fault_tolerance
 
   - rule: DevOps процессы
     steps:
@@ -94,11 +90,6 @@ rules:
     steps:
       - intent: документация
       - action: utter_documentation
-
-  - rule: Мониторинг микросервисов
-    steps:
-      - intent: мониторинг_микросервисов
-      - action: action_monitoring_info
 
   - rule: Оркестрация микросервисов
     steps:

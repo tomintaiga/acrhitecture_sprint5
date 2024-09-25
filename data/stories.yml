@@ -7,10 +7,6 @@ stories:
       - intent: запрос_помощи
       - action: utter_help
 
-  - story: Информация о проекте
-    steps:
-      - intent: описание_архитектуры
-      - action: action_project_info
 
   - story: Выбор технологии для проекта
     steps:
@@ -20,7 +16,7 @@ stories:
   - story: Микросервисная архитектура
     steps:
       - intent: микросервисы
-      - action: action_microservice_info
+      - action: utter_microservices
 
   - story: Монолитная архитектура
     steps:
@@ -50,7 +46,7 @@ stories:
   - story: Обеспечение отказоустойчивости
     steps:
       - intent: отказоустойчивость
-      - action: action_resilience_info
+      - action: utter_fault_tolerance
 
   - story: DevOps настройка
     steps:
@@ -72,20 +68,11 @@ stories:
       - intent: документация
       - action: utter_documentation
 
-  - story: Мониторинг микросервисов
-    steps:
-      - intent: мониторинг_микросервисов
-      - action: action_monitoring_info
 
   - story: Оркестрация микросервисов
     steps:
       - intent: оркестрация_микросервисов
       - action: utter_help
-
-  - story: Тестирование микросервисов
-    steps:
-      - intent: тестирование_микросервисов
-      - action: action_testing_info
 
   - story: Сервисная сеть
     steps:
