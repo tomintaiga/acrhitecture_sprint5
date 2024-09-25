@@ -30,6 +30,21 @@ rules:
       - intent: микросервисы
       - action: action_microservice_info
 
+  - rule: Архитектурные паттерны
+    steps:
+      - intent: архитектурные_паттерны
+      - action: utter_architecture_patterns
+
+  - rule: Методологии разработки
+    steps:
+      - intent: методологии_разработки
+      - action: utter_methodologies
+
+  - rule: Микросервисная архитектура
+    steps:
+      - intent: микросервисная_архитектура
+      - action: utter_microservices
+  
   - rule: Монолитная архитектура
     steps:
       - intent: монолит
