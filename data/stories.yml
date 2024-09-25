@@ -15,7 +15,7 @@ stories:
   - story: Выбор технологии для проекта
     steps:
       - intent: выбор_технологий
-      - action: action_tech_info
+      - action: utter_choose_tech_stack
 
   - story: Микросервисная архитектура
     steps:
@@ -25,7 +25,7 @@ stories:
   - story: Монолитная архитектура
     steps:
       - intent: монолит
-      - action: action_monolith_info
+      - action: utter_monolith
 
   - story: Интеграция систем
     steps:
@@ -35,7 +35,7 @@ stories:
   - story: Безопасность системы
     steps:
       - intent: безопасность
-      - action: action_security_info
+      - action: utter_security
 
   - story: Оптимизация производительности
     steps:
@@ -55,22 +55,22 @@ stories:
   - story: DevOps настройка
     steps:
       - intent: DevOps
-      - action: action_devops_info
+      - action: utter_devops
 
   - story: Контейнеризация проекта
     steps:
       - intent: контейнеризация
-      - action: action_containerization_info
+      - action: utter_containerization
 
   - story: Выбор базы данных
     steps:
       - intent: выбор_базы_данных
-      - action: action_db_choice
+      - action: utter_database_choice
 
   - story: Документация архитектуры
     steps:
       - intent: документация
-      - action: utter_help
+      - action: utter_documentation
 
   - story: Мониторинг микросервисов
     steps:
@@ -95,7 +95,7 @@ stories:
   - story: Безопасность микросервисов
     steps:
       - intent: безопасность_микросервисов
-      - action: action_security_info
+      - action: utter_security
 
   - story: Масштабируемость микросервисов
     steps:
@@ -105,5 +105,8 @@ stories:
   - story: Отказоустойчивость микросервисов
     steps:
       - intent: отказоустойчивость_микросервисов
-      - action: action_resilience_info
+      - action: utter_fault_tolerance
+
+
+
 
