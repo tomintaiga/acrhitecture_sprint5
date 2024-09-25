@@ -53,7 +53,7 @@ rules:
   - rule: Интеграция систем
     steps:
       - intent: интеграция_систем
-      - action: action_integration_info
+      - action: utter_integration
 
   - rule: Обеспечение безопасности
     steps:
@@ -68,7 +68,7 @@ rules:
   - rule: Масштабируемость системы
     steps:
       - intent: масштабируемость
-      - action: action_scalability_info
+      - action: utter_scalability
 
   - rule: Обеспечение отказоустойчивости
     steps:
@@ -123,7 +123,7 @@ rules:
   - rule: Масштабируемость микросервисов
     steps:
       - intent: масштабируемость
-      - action: action_scalability_info
+      - action: utter_scalability
 
   - rule: Отказоустойчивость микросервисов
     steps:

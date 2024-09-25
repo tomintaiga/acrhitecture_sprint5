@@ -30,7 +30,7 @@ stories:
   - story: Интеграция систем
     steps:
       - intent: интеграция_систем
-      - action: action_integration_info
+      - action: utter_integration
 
   - story: Безопасность системы
     steps:
@@ -45,7 +45,7 @@ stories:
   - story: Масштабируемость системы
     steps:
       - intent: масштабируемость
-      - action: action_scalability_info
+      - action: utter_scalability
 
   - story: Обеспечение отказоустойчивости
     steps:
@@ -100,7 +100,7 @@ stories:
   - story: Масштабируемость микросервисов
     steps:
       - intent: масштабируемость
-      - action: action_scalability_info
+      - action: utter_scalability
 
   - story: Отказоустойчивость микросервисов
     steps:
