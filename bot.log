@@ -1,0 +1,1010 @@
+2024-09-25 19:58:39 DEBUG    rasa.core.policies.ensemble  - Predicted next action using RulePolicy.
+2024-09-25 19:58:39 DEBUG    rasa.core.processor  - Predicted next action 'utter_goodbye' with confidence 1.00.
+2024-09-25 19:58:39 DEBUG    rasa.core.processor  - [debug    ] processor.actions.policy_prediction prediction_events=[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x7fa9c3bf2880>]
+2024-09-25 19:58:39 DEBUG    rasa.core.processor  - [debug    ] processor.actions.log          action_name=utter_goodbye rasa_events=[BotUttered('До свидания! Если у вас будут вопросы — обращайтесь!', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"utter_action": "utter_goodbye"}, 1727294319.9855297)]
+2024-09-25 19:58:39 DEBUG    rasa.engine.runner.dask  - Running graph with inputs: {'__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x7fa9c3e31970>}, targets: ['select_prediction'] and ExecutionContext(model_id='2cceae7bf8d4435595f0e524c9069a71', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2024-09-25 19:58:39 DEBUG    rasa.engine.graph  - Node 'rule_only_data_provider' running 'RuleOnlyDataProvider.provide'.
+2024-09-25 19:58:39 DEBUG    rasa.engine.graph  - Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2024-09-25 19:58:39 DEBUG    rasa.engine.graph  - Node 'run_MemoizationPolicy0' running 'MemoizationPolicy.predict_action_probabilities'.
+2024-09-25 19:58:39 DEBUG    rasa.core.policies.memoization  - [debug    ] memoization.predict.actions    tracker_states=[{'user': {'intent': 'запрос_помощи'}, 'prev_action': {'action_name': 'utter_help'}}, {'user': {'intent': 'запрос_помощи'}, 'prev_action': {'action_name': 'action_listen'}}]
+2024-09-25 19:58:39 DEBUG    rasa.core.policies.memoization  - There is no memorised next action
+2024-09-25 19:58:39 DEBUG    rasa.engine.graph  - Node 'run_RulePolicy1' running 'RulePolicy.predict_action_probabilities'.
+2024-09-25 19:58:39 DEBUG    rasa.core.policies.rule_policy  - [debug    ] rule_policy.actions.find       current_states=
+[state 1] user intent: запрос_помощи | previous action name: action_listen
+[state 2] user intent: запрос_помощи | previous action name: utter_help
+[state 3] user intent: запрос_помощи | previous action name: action_listen
+[state 4] user intent: запрос_помощи | previous action name: utter_help
+[state 5] user intent: запрос_помощи | previous action name: action_listen
+[state 6] user intent: запрос_помощи | previous action name: utter_help
+[state 7] user intent: запрос_помощи | previous action name: action_listen
+[state 8] user intent: запрос_помощи | previous action name: utter_help
+[state 9] user intent: сервисная_сеть | previous action name: action_listen
+[state 10] user intent: сервисная_сеть | previous action name: utter_help
+[state 11] user intent: запрос_помощи | previous action name: action_listen
+[state 12] user intent: запрос_помощи | previous action name: utter_help
+[state 13] user intent: запрос_помощи | previous action name: action_listen
+[state 14] user intent: запрос_помощи | previous action name: utter_help
+[state 15] user intent: прощание | previous action name: action_listen
+[state 16] user intent: прощание | previous action name: utter_goodbye
+[state 17] user intent: прощание | previous action name: action_listen
+[state 18] user intent: прощание | previous action name: utter_goodbye
+[state 19] user intent: прощание | previous action name: action_listen
+[state 20] user intent: прощание | previous action name: utter_goodbye
+[state 21] user intent: прощание | previous action name: action_listen
+[state 22] user intent: прощание | previous action name: utter_goodbye
+[state 23] user intent: запрос_помощи | previous action name: action_listen
+[state 24] user intent: запрос_помощи | previous action name: utter_help
+[state 25] user intent: прощание | previous action name: action_listen
+[state 26] user intent: прощание | previous action name: utter_goodbye
+[state 27] user intent: запрос_помощи | previous action name: action_listen
+[state 28] user intent: запрос_помощи | previous action name: utter_help
+[state 29] user intent: прощание | previous action name: action_listen
+[state 30] user intent: прощание | previous action name: utter_goodbye
+[state 31] user intent: архитектурные_паттерны | previous action name: action_listen
+[state 32] user intent: архитектурные_паттерны | previous action name: utter_architecture_patterns
+[state 33] user intent: прощание | previous action name: action_listen
+[state 34] user intent: прощание | previous action name: utter_goodbye
+[state 35] user intent: запрос_помощи | previous action name: action_listen
+[state 36] user intent: запрос_помощи | previous action name: utter_help
+[state 37] user intent: прощание | previous action name: action_listen
+[state 38] user intent: прощание | previous action name: utter_goodbye
+2024-09-25 19:58:39 DEBUG    rasa.core.policies.rule_policy  - There is a rule for the next action 'action_listen'.
+2024-09-25 19:58:39 DEBUG    rasa.engine.graph  - Node 'run_TEDPolicy2' running 'TEDPolicy.predict_action_probabilities'.
+2024-09-25 19:58:39 DEBUG    rasa.core.policies.ted_policy  - TED predicted 'utter_help' based on user intent.
+2024-09-25 19:58:39 DEBUG    rasa.engine.graph  - Node 'select_prediction' running 'DefaultPolicyPredictionEnsemble.combine_predictions_from_kwargs'.
+2024-09-25 19:58:39 DEBUG    rasa.core.policies.ensemble  - Predicted next action using RulePolicy.
+2024-09-25 19:58:39 DEBUG    rasa.core.processor  - Predicted next action 'action_listen' with confidence 1.00.
+2024-09-25 19:58:39 DEBUG    rasa.core.processor  - [debug    ] processor.actions.policy_prediction prediction_events=[]
+2024-09-25 19:58:39 DEBUG    rasa.core.processor  - [debug    ] processor.actions.log          action_name=action_listen rasa_events=[]
+2024-09-25 19:58:39 DEBUG    rasa.core.tracker_store  - No event broker configured. Skipping streaming events.
+2024-09-25 19:58:39 DEBUG    rasa.core.lock_store  - Deleted lock for conversation 'shreyas'.
+2024-09-25 19:58:42 DEBUG    rasa.core.lock_store  - Issuing ticket for conversation 'shreyas'.
+2024-09-25 19:58:42 DEBUG    rasa.core.lock_store  - Acquiring lock for conversation 'shreyas'.
+2024-09-25 19:58:42 DEBUG    rasa.core.lock_store  - Acquired lock for conversation 'shreyas'.
+2024-09-25 19:58:42 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'shreyas'
+2024-09-25 19:58:42 DEBUG    rasa.engine.runner.dask  - Running graph with inputs: {'__message__': [<rasa.core.channels.channel.UserMessage object at 0x7faa142ff520>], '__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x7fa9c3e31970>}, targets: ['run_RegexMessageHandler'] and ExecutionContext(model_id='2cceae7bf8d4435595f0e524c9069a71', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2024-09-25 19:58:42 DEBUG    rasa.engine.graph  - Node 'nlu_message_converter' running 'NLUMessageConverter.convert_user_message'.
+2024-09-25 19:58:42 DEBUG    rasa.engine.graph  - Node 'run_WhitespaceTokenizer0' running 'WhitespaceTokenizer.process'.
+2024-09-25 19:58:42 DEBUG    rasa.engine.graph  - Node 'run_RegexFeaturizer1' running 'RegexFeaturizer.process'.
+2024-09-25 19:58:42 DEBUG    rasa.engine.graph  - Node 'run_LexicalSyntacticFeaturizer2' running 'LexicalSyntacticFeaturizer.process'.
+2024-09-25 19:58:42 DEBUG    rasa.engine.graph  - Node 'run_CountVectorsFeaturizer3' running 'CountVectorsFeaturizer.process'.
+2024-09-25 19:58:42 DEBUG    rasa.engine.graph  - Node 'run_LanguageModelFeaturizer4' running 'LanguageModelFeaturizer.process'.
+2024-09-25 19:58:42 DEBUG    rasa.engine.graph  - Node 'run_DIETClassifier5' running 'DIETClassifier.process'.
+2024-09-25 19:58:42 DEBUG    rasa.engine.graph  - Node 'run_EntitySynonymMapper6' running 'EntitySynonymMapper.process'.
+2024-09-25 19:58:42 DEBUG    rasa.engine.graph  - Node 'run_ResponseSelector7' running 'ResponseSelector.process'.
+2024-09-25 19:58:42 DEBUG    rasa.nlu.classifiers.diet_classifier  - There is no trained model for 'ResponseSelector': The component is either not trained or didn't receive enough training data.
+2024-09-25 19:58:42 DEBUG    rasa.nlu.selectors.response_selector  - Adding following selector key to message property: default
+2024-09-25 19:58:42 DEBUG    rasa.engine.graph  - Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2024-09-25 19:58:42 DEBUG    rasa.engine.graph  - Node 'run_RegexMessageHandler' running 'RegexMessageHandler.process'.
+2024-09-25 19:58:42 DEBUG    rasa.core.processor  - [debug    ] processor.message.parse        parse_data_entities=[] parse_data_intent={'name': 'прощание', 'confidence': 0.06393399834632874} parse_data_text=Архитектура
+2024-09-25 19:58:42 DEBUG    rasa.core.processor  - Logged UserUtterance - tracker now has 99 events.
+2024-09-25 19:58:42 DEBUG    rasa.core.actions.action  - Validating extracted slots:
+2024-09-25 19:58:42 DEBUG    rasa.core.processor  - [debug    ] processor.extract.slots        action_extract_slot=action_extract_slots len_extraction_events=0 rasa_events=[]
+2024-09-25 19:58:42 DEBUG    rasa.engine.runner.dask  - Running graph with inputs: {'__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x7fa9c3e31970>}, targets: ['select_prediction'] and ExecutionContext(model_id='2cceae7bf8d4435595f0e524c9069a71', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2024-09-25 19:58:42 DEBUG    rasa.engine.graph  - Node 'rule_only_data_provider' running 'RuleOnlyDataProvider.provide'.
+2024-09-25 19:58:42 DEBUG    rasa.engine.graph  - Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2024-09-25 19:58:42 DEBUG    rasa.engine.graph  - Node 'run_MemoizationPolicy0' running 'MemoizationPolicy.predict_action_probabilities'.
+2024-09-25 19:58:42 DEBUG    rasa.core.policies.memoization  - [debug    ] memoization.predict.actions    tracker_states=[{'user': {'intent': 'запрос_помощи'}, 'prev_action': {'action_name': 'utter_help'}}, {'user': {'intent': 'прощание'}, 'prev_action': {'action_name': 'action_listen'}}]
+2024-09-25 19:58:42 DEBUG    rasa.core.policies.memoization  - There is no memorised next action
+2024-09-25 19:58:42 DEBUG    rasa.engine.graph  - Node 'run_RulePolicy1' running 'RulePolicy.predict_action_probabilities'.
+2024-09-25 19:58:42 DEBUG    rasa.core.policies.rule_policy  - [debug    ] rule_policy.actions.find       current_states=
+[state 1] user intent: запрос_помощи | previous action name: action_listen
+[state 2] user intent: запрос_помощи | previous action name: utter_help
+[state 3] user intent: запрос_помощи | previous action name: action_listen
+[state 4] user intent: запрос_помощи | previous action name: utter_help
+[state 5] user intent: запрос_помощи | previous action name: action_listen
+[state 6] user intent: запрос_помощи | previous action name: utter_help
+[state 7] user intent: запрос_помощи | previous action name: action_listen
+[state 8] user intent: запрос_помощи | previous action name: utter_help
+[state 9] user intent: сервисная_сеть | previous action name: action_listen
+[state 10] user intent: сервисная_сеть | previous action name: utter_help
+[state 11] user intent: запрос_помощи | previous action name: action_listen
+[state 12] user intent: запрос_помощи | previous action name: utter_help
+[state 13] user intent: запрос_помощи | previous action name: action_listen
+[state 14] user intent: запрос_помощи | previous action name: utter_help
+[state 15] user intent: прощание | previous action name: action_listen
+[state 16] user intent: прощание | previous action name: utter_goodbye
+[state 17] user intent: прощание | previous action name: action_listen
+[state 18] user intent: прощание | previous action name: utter_goodbye
+[state 19] user intent: прощание | previous action name: action_listen
+[state 20] user intent: прощание | previous action name: utter_goodbye
+[state 21] user intent: прощание | previous action name: action_listen
+[state 22] user intent: прощание | previous action name: utter_goodbye
+[state 23] user intent: запрос_помощи | previous action name: action_listen
+[state 24] user intent: запрос_помощи | previous action name: utter_help
+[state 25] user intent: прощание | previous action name: action_listen
+[state 26] user intent: прощание | previous action name: utter_goodbye
+[state 27] user intent: запрос_помощи | previous action name: action_listen
+[state 28] user intent: запрос_помощи | previous action name: utter_help
+[state 29] user intent: прощание | previous action name: action_listen
+[state 30] user intent: прощание | previous action name: utter_goodbye
+[state 31] user intent: архитектурные_паттерны | previous action name: action_listen
+[state 32] user intent: архитектурные_паттерны | previous action name: utter_architecture_patterns
+[state 33] user intent: прощание | previous action name: action_listen
+[state 34] user intent: прощание | previous action name: utter_goodbye
+[state 35] user intent: запрос_помощи | previous action name: action_listen
+[state 36] user intent: запрос_помощи | previous action name: utter_help
+[state 37] user intent: прощание | previous action name: action_listen
+[state 38] user intent: прощание | previous action name: utter_goodbye
+[state 39] user text: Архитектура | previous action name: action_listen
+2024-09-25 19:58:42 DEBUG    rasa.core.policies.rule_policy  - There is no applicable rule.
+2024-09-25 19:58:42 DEBUG    rasa.core.policies.rule_policy  - [debug    ] rule_policy.actions.find       current_states=
+[state 1] user intent: запрос_помощи | previous action name: action_listen
+[state 2] user intent: запрос_помощи | previous action name: utter_help
+[state 3] user intent: запрос_помощи | previous action name: action_listen
+[state 4] user intent: запрос_помощи | previous action name: utter_help
+[state 5] user intent: запрос_помощи | previous action name: action_listen
+[state 6] user intent: запрос_помощи | previous action name: utter_help
+[state 7] user intent: запрос_помощи | previous action name: action_listen
+[state 8] user intent: запрос_помощи | previous action name: utter_help
+[state 9] user intent: сервисная_сеть | previous action name: action_listen
+[state 10] user intent: сервисная_сеть | previous action name: utter_help
+[state 11] user intent: запрос_помощи | previous action name: action_listen
+[state 12] user intent: запрос_помощи | previous action name: utter_help
+[state 13] user intent: запрос_помощи | previous action name: action_listen
+[state 14] user intent: запрос_помощи | previous action name: utter_help
+[state 15] user intent: прощание | previous action name: action_listen
+[state 16] user intent: прощание | previous action name: utter_goodbye
+[state 17] user intent: прощание | previous action name: action_listen
+[state 18] user intent: прощание | previous action name: utter_goodbye
+[state 19] user intent: прощание | previous action name: action_listen
+[state 20] user intent: прощание | previous action name: utter_goodbye
+[state 21] user intent: прощание | previous action name: action_listen
+[state 22] user intent: прощание | previous action name: utter_goodbye
+[state 23] user intent: запрос_помощи | previous action name: action_listen
+[state 24] user intent: запрос_помощи | previous action name: utter_help
+[state 25] user intent: прощание | previous action name: action_listen
+[state 26] user intent: прощание | previous action name: utter_goodbye
+[state 27] user intent: запрос_помощи | previous action name: action_listen
+[state 28] user intent: запрос_помощи | previous action name: utter_help
+[state 29] user intent: прощание | previous action name: action_listen
+[state 30] user intent: прощание | previous action name: utter_goodbye
+[state 31] user intent: архитектурные_паттерны | previous action name: action_listen
+[state 32] user intent: архитектурные_паттерны | previous action name: utter_architecture_patterns
+[state 33] user intent: прощание | previous action name: action_listen
+[state 34] user intent: прощание | previous action name: utter_goodbye
+[state 35] user intent: запрос_помощи | previous action name: action_listen
+[state 36] user intent: запрос_помощи | previous action name: utter_help
+[state 37] user intent: прощание | previous action name: action_listen
+[state 38] user intent: прощание | previous action name: utter_goodbye
+[state 39] user intent: прощание | previous action name: action_listen
+2024-09-25 19:58:42 DEBUG    rasa.core.policies.rule_policy  - There is a rule for the next action 'utter_goodbye'.
+2024-09-25 19:58:42 DEBUG    rasa.engine.graph  - Node 'run_TEDPolicy2' running 'TEDPolicy.predict_action_probabilities'.
+2024-09-25 19:58:42 DEBUG    rasa.core.policies.ted_policy  - TED predicted 'utter_help' based on user intent.
+2024-09-25 19:58:42 DEBUG    rasa.engine.graph  - Node 'select_prediction' running 'DefaultPolicyPredictionEnsemble.combine_predictions_from_kwargs'.
+2024-09-25 19:58:42 DEBUG    rasa.core.policies.ensemble  - Made prediction using user intent.
+2024-09-25 19:58:42 DEBUG    rasa.core.policies.ensemble  - Added `DefinePrevUserUtteredFeaturization(False)` event.
+2024-09-25 19:58:42 DEBUG    rasa.core.policies.ensemble  - Predicted next action using RulePolicy.
+2024-09-25 19:58:42 DEBUG    rasa.core.processor  - Predicted next action 'utter_goodbye' with confidence 1.00.
+2024-09-25 19:58:42 DEBUG    rasa.core.processor  - [debug    ] processor.actions.policy_prediction prediction_events=[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x7fa9c3bf2490>]
+2024-09-25 19:58:42 DEBUG    rasa.core.processor  - [debug    ] processor.actions.log          action_name=utter_goodbye rasa_events=[BotUttered('До свидания! Если у вас будут вопросы — обращайтесь!', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"utter_action": "utter_goodbye"}, 1727294322.997206)]
+2024-09-25 19:58:42 DEBUG    rasa.engine.runner.dask  - Running graph with inputs: {'__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x7fa9c3e31970>}, targets: ['select_prediction'] and ExecutionContext(model_id='2cceae7bf8d4435595f0e524c9069a71', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2024-09-25 19:58:42 DEBUG    rasa.engine.graph  - Node 'rule_only_data_provider' running 'RuleOnlyDataProvider.provide'.
+2024-09-25 19:58:42 DEBUG    rasa.engine.graph  - Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2024-09-25 19:58:42 DEBUG    rasa.engine.graph  - Node 'run_MemoizationPolicy0' running 'MemoizationPolicy.predict_action_probabilities'.
+2024-09-25 19:58:42 DEBUG    rasa.core.policies.memoization  - [debug    ] memoization.predict.actions    tracker_states=[{'user': {'intent': 'запрос_помощи'}, 'prev_action': {'action_name': 'utter_help'}}, {'user': {'intent': 'запрос_помощи'}, 'prev_action': {'action_name': 'action_listen'}}]
+2024-09-25 19:58:42 DEBUG    rasa.core.policies.memoization  - There is no memorised next action
+2024-09-25 19:58:42 DEBUG    rasa.engine.graph  - Node 'run_RulePolicy1' running 'RulePolicy.predict_action_probabilities'.
+2024-09-25 19:58:43 DEBUG    rasa.core.policies.rule_policy  - [debug    ] rule_policy.actions.find       current_states=
+[state 1] user intent: запрос_помощи | previous action name: action_listen
+[state 2] user intent: запрос_помощи | previous action name: utter_help
+[state 3] user intent: запрос_помощи | previous action name: action_listen
+[state 4] user intent: запрос_помощи | previous action name: utter_help
+[state 5] user intent: запрос_помощи | previous action name: action_listen
+[state 6] user intent: запрос_помощи | previous action name: utter_help
+[state 7] user intent: запрос_помощи | previous action name: action_listen
+[state 8] user intent: запрос_помощи | previous action name: utter_help
+[state 9] user intent: сервисная_сеть | previous action name: action_listen
+[state 10] user intent: сервисная_сеть | previous action name: utter_help
+[state 11] user intent: запрос_помощи | previous action name: action_listen
+[state 12] user intent: запрос_помощи | previous action name: utter_help
+[state 13] user intent: запрос_помощи | previous action name: action_listen
+[state 14] user intent: запрос_помощи | previous action name: utter_help
+[state 15] user intent: прощание | previous action name: action_listen
+[state 16] user intent: прощание | previous action name: utter_goodbye
+[state 17] user intent: прощание | previous action name: action_listen
+[state 18] user intent: прощание | previous action name: utter_goodbye
+[state 19] user intent: прощание | previous action name: action_listen
+[state 20] user intent: прощание | previous action name: utter_goodbye
+[state 21] user intent: прощание | previous action name: action_listen
+[state 22] user intent: прощание | previous action name: utter_goodbye
+[state 23] user intent: запрос_помощи | previous action name: action_listen
+[state 24] user intent: запрос_помощи | previous action name: utter_help
+[state 25] user intent: прощание | previous action name: action_listen
+[state 26] user intent: прощание | previous action name: utter_goodbye
+[state 27] user intent: запрос_помощи | previous action name: action_listen
+[state 28] user intent: запрос_помощи | previous action name: utter_help
+[state 29] user intent: прощание | previous action name: action_listen
+[state 30] user intent: прощание | previous action name: utter_goodbye
+[state 31] user intent: архитектурные_паттерны | previous action name: action_listen
+[state 32] user intent: архитектурные_паттерны | previous action name: utter_architecture_patterns
+[state 33] user intent: прощание | previous action name: action_listen
+[state 34] user intent: прощание | previous action name: utter_goodbye
+[state 35] user intent: запрос_помощи | previous action name: action_listen
+[state 36] user intent: запрос_помощи | previous action name: utter_help
+[state 37] user intent: прощание | previous action name: action_listen
+[state 38] user intent: прощание | previous action name: utter_goodbye
+[state 39] user intent: прощание | previous action name: action_listen
+[state 40] user intent: прощание | previous action name: utter_goodbye
+2024-09-25 19:58:43 DEBUG    rasa.core.policies.rule_policy  - There is a rule for the next action 'action_listen'.
+2024-09-25 19:58:43 DEBUG    rasa.engine.graph  - Node 'run_TEDPolicy2' running 'TEDPolicy.predict_action_probabilities'.
+2024-09-25 19:58:43 DEBUG    rasa.core.policies.ted_policy  - TED predicted 'utter_help' based on user intent.
+2024-09-25 19:58:43 DEBUG    rasa.engine.graph  - Node 'select_prediction' running 'DefaultPolicyPredictionEnsemble.combine_predictions_from_kwargs'.
+2024-09-25 19:58:43 DEBUG    rasa.core.policies.ensemble  - Predicted next action using RulePolicy.
+2024-09-25 19:58:43 DEBUG    rasa.core.processor  - Predicted next action 'action_listen' with confidence 1.00.
+2024-09-25 19:58:43 DEBUG    rasa.core.processor  - [debug    ] processor.actions.policy_prediction prediction_events=[]
+2024-09-25 19:58:43 DEBUG    rasa.core.processor  - [debug    ] processor.actions.log          action_name=action_listen rasa_events=[]
+2024-09-25 19:58:43 DEBUG    rasa.core.tracker_store  - No event broker configured. Skipping streaming events.
+2024-09-25 19:58:43 DEBUG    rasa.core.lock_store  - Deleted lock for conversation 'shreyas'.
+2024-09-25 19:58:45 DEBUG    rasa.core.lock_store  - Issuing ticket for conversation 'shreyas'.
+2024-09-25 19:58:45 DEBUG    rasa.core.lock_store  - Acquiring lock for conversation 'shreyas'.
+2024-09-25 19:58:45 DEBUG    rasa.core.lock_store  - Acquired lock for conversation 'shreyas'.
+2024-09-25 19:58:45 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'shreyas'
+2024-09-25 19:58:45 DEBUG    rasa.engine.runner.dask  - Running graph with inputs: {'__message__': [<rasa.core.channels.channel.UserMessage object at 0x7fa9ab4f5d00>], '__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x7fa9c3e31970>}, targets: ['run_RegexMessageHandler'] and ExecutionContext(model_id='2cceae7bf8d4435595f0e524c9069a71', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2024-09-25 19:58:45 DEBUG    rasa.engine.graph  - Node 'nlu_message_converter' running 'NLUMessageConverter.convert_user_message'.
+2024-09-25 19:58:45 DEBUG    rasa.engine.graph  - Node 'run_WhitespaceTokenizer0' running 'WhitespaceTokenizer.process'.
+2024-09-25 19:58:45 DEBUG    rasa.engine.graph  - Node 'run_RegexFeaturizer1' running 'RegexFeaturizer.process'.
+2024-09-25 19:58:45 DEBUG    rasa.engine.graph  - Node 'run_LexicalSyntacticFeaturizer2' running 'LexicalSyntacticFeaturizer.process'.
+2024-09-25 19:58:45 DEBUG    rasa.engine.graph  - Node 'run_CountVectorsFeaturizer3' running 'CountVectorsFeaturizer.process'.
+2024-09-25 19:58:45 DEBUG    rasa.engine.graph  - Node 'run_LanguageModelFeaturizer4' running 'LanguageModelFeaturizer.process'.
+2024-09-25 19:58:45 DEBUG    rasa.engine.graph  - Node 'run_DIETClassifier5' running 'DIETClassifier.process'.
+2024-09-25 19:58:45 DEBUG    rasa.engine.graph  - Node 'run_EntitySynonymMapper6' running 'EntitySynonymMapper.process'.
+2024-09-25 19:58:45 DEBUG    rasa.engine.graph  - Node 'run_ResponseSelector7' running 'ResponseSelector.process'.
+2024-09-25 19:58:45 DEBUG    rasa.nlu.classifiers.diet_classifier  - There is no trained model for 'ResponseSelector': The component is either not trained or didn't receive enough training data.
+2024-09-25 19:58:45 DEBUG    rasa.nlu.selectors.response_selector  - Adding following selector key to message property: default
+2024-09-25 19:58:45 DEBUG    rasa.engine.graph  - Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2024-09-25 19:58:45 DEBUG    rasa.engine.graph  - Node 'run_RegexMessageHandler' running 'RegexMessageHandler.process'.
+2024-09-25 19:58:45 DEBUG    rasa.core.processor  - [debug    ] processor.message.parse        parse_data_entities=[] parse_data_intent={'name': 'прощание', 'confidence': 0.07389462739229202} parse_data_text=Бобры
+2024-09-25 19:58:45 DEBUG    rasa.core.processor  - Logged UserUtterance - tracker now has 104 events.
+2024-09-25 19:58:45 DEBUG    rasa.core.actions.action  - Validating extracted slots:
+2024-09-25 19:58:45 DEBUG    rasa.core.processor  - [debug    ] processor.extract.slots        action_extract_slot=action_extract_slots len_extraction_events=0 rasa_events=[]
+2024-09-25 19:58:45 DEBUG    rasa.engine.runner.dask  - Running graph with inputs: {'__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x7fa9c3e31970>}, targets: ['select_prediction'] and ExecutionContext(model_id='2cceae7bf8d4435595f0e524c9069a71', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2024-09-25 19:58:45 DEBUG    rasa.engine.graph  - Node 'rule_only_data_provider' running 'RuleOnlyDataProvider.provide'.
+2024-09-25 19:58:45 DEBUG    rasa.engine.graph  - Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2024-09-25 19:58:45 DEBUG    rasa.engine.graph  - Node 'run_MemoizationPolicy0' running 'MemoizationPolicy.predict_action_probabilities'.
+2024-09-25 19:58:45 DEBUG    rasa.core.policies.memoization  - [debug    ] memoization.predict.actions    tracker_states=[{'user': {'intent': 'запрос_помощи'}, 'prev_action': {'action_name': 'utter_help'}}, {'user': {'intent': 'прощание'}, 'prev_action': {'action_name': 'action_listen'}}]
+2024-09-25 19:58:45 DEBUG    rasa.core.policies.memoization  - There is no memorised next action
+2024-09-25 19:58:45 DEBUG    rasa.engine.graph  - Node 'run_RulePolicy1' running 'RulePolicy.predict_action_probabilities'.
+2024-09-25 19:58:45 DEBUG    rasa.core.policies.rule_policy  - [debug    ] rule_policy.actions.find       current_states=
+[state 1] user intent: запрос_помощи | previous action name: action_listen
+[state 2] user intent: запрос_помощи | previous action name: utter_help
+[state 3] user intent: запрос_помощи | previous action name: action_listen
+[state 4] user intent: запрос_помощи | previous action name: utter_help
+[state 5] user intent: запрос_помощи | previous action name: action_listen
+[state 6] user intent: запрос_помощи | previous action name: utter_help
+[state 7] user intent: запрос_помощи | previous action name: action_listen
+[state 8] user intent: запрос_помощи | previous action name: utter_help
+[state 9] user intent: сервисная_сеть | previous action name: action_listen
+[state 10] user intent: сервисная_сеть | previous action name: utter_help
+[state 11] user intent: запрос_помощи | previous action name: action_listen
+[state 12] user intent: запрос_помощи | previous action name: utter_help
+[state 13] user intent: запрос_помощи | previous action name: action_listen
+[state 14] user intent: запрос_помощи | previous action name: utter_help
+[state 15] user intent: прощание | previous action name: action_listen
+[state 16] user intent: прощание | previous action name: utter_goodbye
+[state 17] user intent: прощание | previous action name: action_listen
+[state 18] user intent: прощание | previous action name: utter_goodbye
+[state 19] user intent: прощание | previous action name: action_listen
+[state 20] user intent: прощание | previous action name: utter_goodbye
+[state 21] user intent: прощание | previous action name: action_listen
+[state 22] user intent: прощание | previous action name: utter_goodbye
+[state 23] user intent: запрос_помощи | previous action name: action_listen
+[state 24] user intent: запрос_помощи | previous action name: utter_help
+[state 25] user intent: прощание | previous action name: action_listen
+[state 26] user intent: прощание | previous action name: utter_goodbye
+[state 27] user intent: запрос_помощи | previous action name: action_listen
+[state 28] user intent: запрос_помощи | previous action name: utter_help
+[state 29] user intent: прощание | previous action name: action_listen
+[state 30] user intent: прощание | previous action name: utter_goodbye
+[state 31] user intent: архитектурные_паттерны | previous action name: action_listen
+[state 32] user intent: архитектурные_паттерны | previous action name: utter_architecture_patterns
+[state 33] user intent: прощание | previous action name: action_listen
+[state 34] user intent: прощание | previous action name: utter_goodbye
+[state 35] user intent: запрос_помощи | previous action name: action_listen
+[state 36] user intent: запрос_помощи | previous action name: utter_help
+[state 37] user intent: прощание | previous action name: action_listen
+[state 38] user intent: прощание | previous action name: utter_goodbye
+[state 39] user intent: прощание | previous action name: action_listen
+[state 40] user intent: прощание | previous action name: utter_goodbye
+[state 41] user text: Бобры | previous action name: action_listen
+2024-09-25 19:58:45 DEBUG    rasa.core.policies.rule_policy  - There is no applicable rule.
+2024-09-25 19:58:45 DEBUG    rasa.core.policies.rule_policy  - [debug    ] rule_policy.actions.find       current_states=
+[state 1] user intent: запрос_помощи | previous action name: action_listen
+[state 2] user intent: запрос_помощи | previous action name: utter_help
+[state 3] user intent: запрос_помощи | previous action name: action_listen
+[state 4] user intent: запрос_помощи | previous action name: utter_help
+[state 5] user intent: запрос_помощи | previous action name: action_listen
+[state 6] user intent: запрос_помощи | previous action name: utter_help
+[state 7] user intent: запрос_помощи | previous action name: action_listen
+[state 8] user intent: запрос_помощи | previous action name: utter_help
+[state 9] user intent: сервисная_сеть | previous action name: action_listen
+[state 10] user intent: сервисная_сеть | previous action name: utter_help
+[state 11] user intent: запрос_помощи | previous action name: action_listen
+[state 12] user intent: запрос_помощи | previous action name: utter_help
+[state 13] user intent: запрос_помощи | previous action name: action_listen
+[state 14] user intent: запрос_помощи | previous action name: utter_help
+[state 15] user intent: прощание | previous action name: action_listen
+[state 16] user intent: прощание | previous action name: utter_goodbye
+[state 17] user intent: прощание | previous action name: action_listen
+[state 18] user intent: прощание | previous action name: utter_goodbye
+[state 19] user intent: прощание | previous action name: action_listen
+[state 20] user intent: прощание | previous action name: utter_goodbye
+[state 21] user intent: прощание | previous action name: action_listen
+[state 22] user intent: прощание | previous action name: utter_goodbye
+[state 23] user intent: запрос_помощи | previous action name: action_listen
+[state 24] user intent: запрос_помощи | previous action name: utter_help
+[state 25] user intent: прощание | previous action name: action_listen
+[state 26] user intent: прощание | previous action name: utter_goodbye
+[state 27] user intent: запрос_помощи | previous action name: action_listen
+[state 28] user intent: запрос_помощи | previous action name: utter_help
+[state 29] user intent: прощание | previous action name: action_listen
+[state 30] user intent: прощание | previous action name: utter_goodbye
+[state 31] user intent: архитектурные_паттерны | previous action name: action_listen
+[state 32] user intent: архитектурные_паттерны | previous action name: utter_architecture_patterns
+[state 33] user intent: прощание | previous action name: action_listen
+[state 34] user intent: прощание | previous action name: utter_goodbye
+[state 35] user intent: запрос_помощи | previous action name: action_listen
+[state 36] user intent: запрос_помощи | previous action name: utter_help
+[state 37] user intent: прощание | previous action name: action_listen
+[state 38] user intent: прощание | previous action name: utter_goodbye
+[state 39] user intent: прощание | previous action name: action_listen
+[state 40] user intent: прощание | previous action name: utter_goodbye
+[state 41] user intent: прощание | previous action name: action_listen
+2024-09-25 19:58:45 DEBUG    rasa.core.policies.rule_policy  - There is a rule for the next action 'utter_goodbye'.
+2024-09-25 19:58:45 DEBUG    rasa.engine.graph  - Node 'run_TEDPolicy2' running 'TEDPolicy.predict_action_probabilities'.
+2024-09-25 19:58:45 DEBUG    rasa.core.policies.ted_policy  - TED predicted 'utter_help' based on user intent.
+2024-09-25 19:58:45 DEBUG    rasa.engine.graph  - Node 'select_prediction' running 'DefaultPolicyPredictionEnsemble.combine_predictions_from_kwargs'.
+2024-09-25 19:58:45 DEBUG    rasa.core.policies.ensemble  - Made prediction using user intent.
+2024-09-25 19:58:45 DEBUG    rasa.core.policies.ensemble  - Added `DefinePrevUserUtteredFeaturization(False)` event.
+2024-09-25 19:58:45 DEBUG    rasa.core.policies.ensemble  - Predicted next action using RulePolicy.
+2024-09-25 19:58:45 DEBUG    rasa.core.processor  - Predicted next action 'utter_goodbye' with confidence 1.00.
+2024-09-25 19:58:45 DEBUG    rasa.core.processor  - [debug    ] processor.actions.policy_prediction prediction_events=[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x7fa9c3bf25e0>]
+2024-09-25 19:58:45 DEBUG    rasa.core.processor  - [debug    ] processor.actions.log          action_name=utter_goodbye rasa_events=[BotUttered('До свидания! Если у вас будут вопросы — обращайтесь!', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"utter_action": "utter_goodbye"}, 1727294325.2652287)]
+2024-09-25 19:58:45 DEBUG    rasa.engine.runner.dask  - Running graph with inputs: {'__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x7fa9c3e31970>}, targets: ['select_prediction'] and ExecutionContext(model_id='2cceae7bf8d4435595f0e524c9069a71', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2024-09-25 19:58:45 DEBUG    rasa.engine.graph  - Node 'rule_only_data_provider' running 'RuleOnlyDataProvider.provide'.
+2024-09-25 19:58:45 DEBUG    rasa.engine.graph  - Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2024-09-25 19:58:45 DEBUG    rasa.engine.graph  - Node 'run_MemoizationPolicy0' running 'MemoizationPolicy.predict_action_probabilities'.
+2024-09-25 19:58:45 DEBUG    rasa.core.policies.memoization  - [debug    ] memoization.predict.actions    tracker_states=[{'user': {'intent': 'запрос_помощи'}, 'prev_action': {'action_name': 'utter_help'}}, {'user': {'intent': 'запрос_помощи'}, 'prev_action': {'action_name': 'action_listen'}}]
+2024-09-25 19:58:45 DEBUG    rasa.core.policies.memoization  - There is no memorised next action
+2024-09-25 19:58:45 DEBUG    rasa.engine.graph  - Node 'run_RulePolicy1' running 'RulePolicy.predict_action_probabilities'.
+2024-09-25 19:58:45 DEBUG    rasa.core.policies.rule_policy  - [debug    ] rule_policy.actions.find       current_states=
+[state 1] user intent: запрос_помощи | previous action name: action_listen
+[state 2] user intent: запрос_помощи | previous action name: utter_help
+[state 3] user intent: запрос_помощи | previous action name: action_listen
+[state 4] user intent: запрос_помощи | previous action name: utter_help
+[state 5] user intent: запрос_помощи | previous action name: action_listen
+[state 6] user intent: запрос_помощи | previous action name: utter_help
+[state 7] user intent: запрос_помощи | previous action name: action_listen
+[state 8] user intent: запрос_помощи | previous action name: utter_help
+[state 9] user intent: сервисная_сеть | previous action name: action_listen
+[state 10] user intent: сервисная_сеть | previous action name: utter_help
+[state 11] user intent: запрос_помощи | previous action name: action_listen
+[state 12] user intent: запрос_помощи | previous action name: utter_help
+[state 13] user intent: запрос_помощи | previous action name: action_listen
+[state 14] user intent: запрос_помощи | previous action name: utter_help
+[state 15] user intent: прощание | previous action name: action_listen
+[state 16] user intent: прощание | previous action name: utter_goodbye
+[state 17] user intent: прощание | previous action name: action_listen
+[state 18] user intent: прощание | previous action name: utter_goodbye
+[state 19] user intent: прощание | previous action name: action_listen
+[state 20] user intent: прощание | previous action name: utter_goodbye
+[state 21] user intent: прощание | previous action name: action_listen
+[state 22] user intent: прощание | previous action name: utter_goodbye
+[state 23] user intent: запрос_помощи | previous action name: action_listen
+[state 24] user intent: запрос_помощи | previous action name: utter_help
+[state 25] user intent: прощание | previous action name: action_listen
+[state 26] user intent: прощание | previous action name: utter_goodbye
+[state 27] user intent: запрос_помощи | previous action name: action_listen
+[state 28] user intent: запрос_помощи | previous action name: utter_help
+[state 29] user intent: прощание | previous action name: action_listen
+[state 30] user intent: прощание | previous action name: utter_goodbye
+[state 31] user intent: архитектурные_паттерны | previous action name: action_listen
+[state 32] user intent: архитектурные_паттерны | previous action name: utter_architecture_patterns
+[state 33] user intent: прощание | previous action name: action_listen
+[state 34] user intent: прощание | previous action name: utter_goodbye
+[state 35] user intent: запрос_помощи | previous action name: action_listen
+[state 36] user intent: запрос_помощи | previous action name: utter_help
+[state 37] user intent: прощание | previous action name: action_listen
+[state 38] user intent: прощание | previous action name: utter_goodbye
+[state 39] user intent: прощание | previous action name: action_listen
+[state 40] user intent: прощание | previous action name: utter_goodbye
+[state 41] user intent: прощание | previous action name: action_listen
+[state 42] user intent: прощание | previous action name: utter_goodbye
+2024-09-25 19:58:45 DEBUG    rasa.core.policies.rule_policy  - There is a rule for the next action 'action_listen'.
+2024-09-25 19:58:45 DEBUG    rasa.engine.graph  - Node 'run_TEDPolicy2' running 'TEDPolicy.predict_action_probabilities'.
+2024-09-25 19:58:45 DEBUG    rasa.core.policies.ted_policy  - TED predicted 'utter_help' based on user intent.
+2024-09-25 19:58:45 DEBUG    rasa.engine.graph  - Node 'select_prediction' running 'DefaultPolicyPredictionEnsemble.combine_predictions_from_kwargs'.
+2024-09-25 19:58:45 DEBUG    rasa.core.policies.ensemble  - Predicted next action using RulePolicy.
+2024-09-25 19:58:45 DEBUG    rasa.core.processor  - Predicted next action 'action_listen' with confidence 1.00.
+2024-09-25 19:58:45 DEBUG    rasa.core.processor  - [debug    ] processor.actions.policy_prediction prediction_events=[]
+2024-09-25 19:58:45 DEBUG    rasa.core.processor  - [debug    ] processor.actions.log          action_name=action_listen rasa_events=[]
+2024-09-25 19:58:45 DEBUG    rasa.core.tracker_store  - No event broker configured. Skipping streaming events.
+2024-09-25 19:58:45 DEBUG    rasa.core.lock_store  - Deleted lock for conversation 'shreyas'.
+2024-09-25 19:58:46 DEBUG    rasa.core.lock_store  - Issuing ticket for conversation 'shreyas'.
+2024-09-25 19:58:46 DEBUG    rasa.core.lock_store  - Acquiring lock for conversation 'shreyas'.
+2024-09-25 19:58:46 DEBUG    rasa.core.lock_store  - Acquired lock for conversation 'shreyas'.
+2024-09-25 19:58:46 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'shreyas'
+2024-09-25 19:58:46 DEBUG    rasa.engine.runner.dask  - Running graph with inputs: {'__message__': [<rasa.core.channels.channel.UserMessage object at 0x7faa80352880>], '__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x7fa9c3e31970>}, targets: ['run_RegexMessageHandler'] and ExecutionContext(model_id='2cceae7bf8d4435595f0e524c9069a71', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2024-09-25 19:58:46 DEBUG    rasa.engine.graph  - Node 'nlu_message_converter' running 'NLUMessageConverter.convert_user_message'.
+2024-09-25 19:58:46 DEBUG    rasa.engine.graph  - Node 'run_WhitespaceTokenizer0' running 'WhitespaceTokenizer.process'.
+2024-09-25 19:58:46 DEBUG    rasa.engine.graph  - Node 'run_RegexFeaturizer1' running 'RegexFeaturizer.process'.
+2024-09-25 19:58:46 DEBUG    rasa.engine.graph  - Node 'run_LexicalSyntacticFeaturizer2' running 'LexicalSyntacticFeaturizer.process'.
+2024-09-25 19:58:46 DEBUG    rasa.engine.graph  - Node 'run_CountVectorsFeaturizer3' running 'CountVectorsFeaturizer.process'.
+2024-09-25 19:58:46 DEBUG    rasa.engine.graph  - Node 'run_LanguageModelFeaturizer4' running 'LanguageModelFeaturizer.process'.
+2024-09-25 19:58:47 DEBUG    rasa.engine.graph  - Node 'run_DIETClassifier5' running 'DIETClassifier.process'.
+2024-09-25 19:58:47 DEBUG    rasa.engine.graph  - Node 'run_EntitySynonymMapper6' running 'EntitySynonymMapper.process'.
+2024-09-25 19:58:47 DEBUG    rasa.engine.graph  - Node 'run_ResponseSelector7' running 'ResponseSelector.process'.
+2024-09-25 19:58:47 DEBUG    rasa.nlu.classifiers.diet_classifier  - There is no trained model for 'ResponseSelector': The component is either not trained or didn't receive enough training data.
+2024-09-25 19:58:47 DEBUG    rasa.nlu.selectors.response_selector  - Adding following selector key to message property: default
+2024-09-25 19:58:47 DEBUG    rasa.engine.graph  - Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2024-09-25 19:58:47 DEBUG    rasa.engine.graph  - Node 'run_RegexMessageHandler' running 'RegexMessageHandler.process'.
+2024-09-25 19:58:47 DEBUG    rasa.core.processor  - [debug    ] processor.message.parse        parse_data_entities=[] parse_data_intent={'name': 'архитектурные_паттерны', 'confidence': 0.0708385705947876} parse_data_text=Нет
+2024-09-25 19:58:47 DEBUG    rasa.core.processor  - Logged UserUtterance - tracker now has 109 events.
+2024-09-25 19:58:47 DEBUG    rasa.core.actions.action  - Validating extracted slots:
+2024-09-25 19:58:47 DEBUG    rasa.core.processor  - [debug    ] processor.extract.slots        action_extract_slot=action_extract_slots len_extraction_events=0 rasa_events=[]
+2024-09-25 19:58:47 DEBUG    rasa.engine.runner.dask  - Running graph with inputs: {'__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x7fa9c3e31970>}, targets: ['select_prediction'] and ExecutionContext(model_id='2cceae7bf8d4435595f0e524c9069a71', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2024-09-25 19:58:47 DEBUG    rasa.engine.graph  - Node 'rule_only_data_provider' running 'RuleOnlyDataProvider.provide'.
+2024-09-25 19:58:47 DEBUG    rasa.engine.graph  - Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2024-09-25 19:58:47 DEBUG    rasa.engine.graph  - Node 'run_MemoizationPolicy0' running 'MemoizationPolicy.predict_action_probabilities'.
+2024-09-25 19:58:47 DEBUG    rasa.core.policies.memoization  - [debug    ] memoization.predict.actions    tracker_states=[{'user': {'intent': 'запрос_помощи'}, 'prev_action': {'action_name': 'utter_help'}}, {'user': {'intent': 'архитектурные_паттерны'}, 'prev_action': {'action_name': 'action_listen'}}]
+2024-09-25 19:58:47 DEBUG    rasa.core.policies.memoization  - There is no memorised next action
+2024-09-25 19:58:47 DEBUG    rasa.engine.graph  - Node 'run_RulePolicy1' running 'RulePolicy.predict_action_probabilities'.
+2024-09-25 19:58:47 DEBUG    rasa.core.policies.rule_policy  - [debug    ] rule_policy.actions.find       current_states=
+[state 1] user intent: запрос_помощи | previous action name: action_listen
+[state 2] user intent: запрос_помощи | previous action name: utter_help
+[state 3] user intent: запрос_помощи | previous action name: action_listen
+[state 4] user intent: запрос_помощи | previous action name: utter_help
+[state 5] user intent: запрос_помощи | previous action name: action_listen
+[state 6] user intent: запрос_помощи | previous action name: utter_help
+[state 7] user intent: запрос_помощи | previous action name: action_listen
+[state 8] user intent: запрос_помощи | previous action name: utter_help
+[state 9] user intent: сервисная_сеть | previous action name: action_listen
+[state 10] user intent: сервисная_сеть | previous action name: utter_help
+[state 11] user intent: запрос_помощи | previous action name: action_listen
+[state 12] user intent: запрос_помощи | previous action name: utter_help
+[state 13] user intent: запрос_помощи | previous action name: action_listen
+[state 14] user intent: запрос_помощи | previous action name: utter_help
+[state 15] user intent: прощание | previous action name: action_listen
+[state 16] user intent: прощание | previous action name: utter_goodbye
+[state 17] user intent: прощание | previous action name: action_listen
+[state 18] user intent: прощание | previous action name: utter_goodbye
+[state 19] user intent: прощание | previous action name: action_listen
+[state 20] user intent: прощание | previous action name: utter_goodbye
+[state 21] user intent: прощание | previous action name: action_listen
+[state 22] user intent: прощание | previous action name: utter_goodbye
+[state 23] user intent: запрос_помощи | previous action name: action_listen
+[state 24] user intent: запрос_помощи | previous action name: utter_help
+[state 25] user intent: прощание | previous action name: action_listen
+[state 26] user intent: прощание | previous action name: utter_goodbye
+[state 27] user intent: запрос_помощи | previous action name: action_listen
+[state 28] user intent: запрос_помощи | previous action name: utter_help
+[state 29] user intent: прощание | previous action name: action_listen
+[state 30] user intent: прощание | previous action name: utter_goodbye
+[state 31] user intent: архитектурные_паттерны | previous action name: action_listen
+[state 32] user intent: архитектурные_паттерны | previous action name: utter_architecture_patterns
+[state 33] user intent: прощание | previous action name: action_listen
+[state 34] user intent: прощание | previous action name: utter_goodbye
+[state 35] user intent: запрос_помощи | previous action name: action_listen
+[state 36] user intent: запрос_помощи | previous action name: utter_help
+[state 37] user intent: прощание | previous action name: action_listen
+[state 38] user intent: прощание | previous action name: utter_goodbye
+[state 39] user intent: прощание | previous action name: action_listen
+[state 40] user intent: прощание | previous action name: utter_goodbye
+[state 41] user intent: прощание | previous action name: action_listen
+[state 42] user intent: прощание | previous action name: utter_goodbye
+[state 43] user text: Нет | previous action name: action_listen
+2024-09-25 19:58:47 DEBUG    rasa.core.policies.rule_policy  - There is no applicable rule.
+2024-09-25 19:58:47 DEBUG    rasa.core.policies.rule_policy  - [debug    ] rule_policy.actions.find       current_states=
+[state 1] user intent: запрос_помощи | previous action name: action_listen
+[state 2] user intent: запрос_помощи | previous action name: utter_help
+[state 3] user intent: запрос_помощи | previous action name: action_listen
+[state 4] user intent: запрос_помощи | previous action name: utter_help
+[state 5] user intent: запрос_помощи | previous action name: action_listen
+[state 6] user intent: запрос_помощи | previous action name: utter_help
+[state 7] user intent: запрос_помощи | previous action name: action_listen
+[state 8] user intent: запрос_помощи | previous action name: utter_help
+[state 9] user intent: сервисная_сеть | previous action name: action_listen
+[state 10] user intent: сервисная_сеть | previous action name: utter_help
+[state 11] user intent: запрос_помощи | previous action name: action_listen
+[state 12] user intent: запрос_помощи | previous action name: utter_help
+[state 13] user intent: запрос_помощи | previous action name: action_listen
+[state 14] user intent: запрос_помощи | previous action name: utter_help
+[state 15] user intent: прощание | previous action name: action_listen
+[state 16] user intent: прощание | previous action name: utter_goodbye
+[state 17] user intent: прощание | previous action name: action_listen
+[state 18] user intent: прощание | previous action name: utter_goodbye
+[state 19] user intent: прощание | previous action name: action_listen
+[state 20] user intent: прощание | previous action name: utter_goodbye
+[state 21] user intent: прощание | previous action name: action_listen
+[state 22] user intent: прощание | previous action name: utter_goodbye
+[state 23] user intent: запрос_помощи | previous action name: action_listen
+[state 24] user intent: запрос_помощи | previous action name: utter_help
+[state 25] user intent: прощание | previous action name: action_listen
+[state 26] user intent: прощание | previous action name: utter_goodbye
+[state 27] user intent: запрос_помощи | previous action name: action_listen
+[state 28] user intent: запрос_помощи | previous action name: utter_help
+[state 29] user intent: прощание | previous action name: action_listen
+[state 30] user intent: прощание | previous action name: utter_goodbye
+[state 31] user intent: архитектурные_паттерны | previous action name: action_listen
+[state 32] user intent: архитектурные_паттерны | previous action name: utter_architecture_patterns
+[state 33] user intent: прощание | previous action name: action_listen
+[state 34] user intent: прощание | previous action name: utter_goodbye
+[state 35] user intent: запрос_помощи | previous action name: action_listen
+[state 36] user intent: запрос_помощи | previous action name: utter_help
+[state 37] user intent: прощание | previous action name: action_listen
+[state 38] user intent: прощание | previous action name: utter_goodbye
+[state 39] user intent: прощание | previous action name: action_listen
+[state 40] user intent: прощание | previous action name: utter_goodbye
+[state 41] user intent: прощание | previous action name: action_listen
+[state 42] user intent: прощание | previous action name: utter_goodbye
+[state 43] user intent: архитектурные_паттерны | previous action name: action_listen
+2024-09-25 19:58:47 DEBUG    rasa.core.policies.rule_policy  - There is a rule for the next action 'utter_architecture_patterns'.
+2024-09-25 19:58:47 DEBUG    rasa.engine.graph  - Node 'run_TEDPolicy2' running 'TEDPolicy.predict_action_probabilities'.
+2024-09-25 19:58:47 DEBUG    rasa.core.policies.ted_policy  - TED predicted 'utter_greet' based on user intent.
+2024-09-25 19:58:47 DEBUG    rasa.engine.graph  - Node 'select_prediction' running 'DefaultPolicyPredictionEnsemble.combine_predictions_from_kwargs'.
+2024-09-25 19:58:47 DEBUG    rasa.core.policies.ensemble  - Made prediction using user intent.
+2024-09-25 19:58:47 DEBUG    rasa.core.policies.ensemble  - Added `DefinePrevUserUtteredFeaturization(False)` event.
+2024-09-25 19:58:47 DEBUG    rasa.core.policies.ensemble  - Predicted next action using RulePolicy.
+2024-09-25 19:58:47 DEBUG    rasa.core.processor  - Predicted next action 'utter_architecture_patterns' with confidence 1.00.
+2024-09-25 19:58:47 DEBUG    rasa.core.processor  - [debug    ] processor.actions.policy_prediction prediction_events=[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x7fa9c3bf27f0>]
+2024-09-25 19:58:47 DEBUG    rasa.core.processor  - [debug    ] processor.actions.log          action_name=utter_architecture_patterns rasa_events=[BotUttered('Популярные архитектурные паттерны включают MVC, CQRS и Event Sourcing.', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"utter_action": "utter_architecture_patterns"}, 1727294327.1750617)]
+2024-09-25 19:58:47 DEBUG    rasa.engine.runner.dask  - Running graph with inputs: {'__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x7fa9c3e31970>}, targets: ['select_prediction'] and ExecutionContext(model_id='2cceae7bf8d4435595f0e524c9069a71', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2024-09-25 19:58:47 DEBUG    rasa.engine.graph  - Node 'rule_only_data_provider' running 'RuleOnlyDataProvider.provide'.
+2024-09-25 19:58:47 DEBUG    rasa.engine.graph  - Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2024-09-25 19:58:47 DEBUG    rasa.engine.graph  - Node 'run_MemoizationPolicy0' running 'MemoizationPolicy.predict_action_probabilities'.
+2024-09-25 19:58:47 DEBUG    rasa.core.policies.memoization  - [debug    ] memoization.predict.actions    tracker_states=[{'user': {'intent': 'запрос_помощи'}, 'prev_action': {'action_name': 'utter_help'}}, {'user': {'intent': 'запрос_помощи'}, 'prev_action': {'action_name': 'action_listen'}}]
+2024-09-25 19:58:47 DEBUG    rasa.core.policies.memoization  - There is no memorised next action
+2024-09-25 19:58:47 DEBUG    rasa.engine.graph  - Node 'run_RulePolicy1' running 'RulePolicy.predict_action_probabilities'.
+2024-09-25 19:58:47 DEBUG    rasa.core.policies.rule_policy  - [debug    ] rule_policy.actions.find       current_states=
+[state 1] user intent: запрос_помощи | previous action name: action_listen
+[state 2] user intent: запрос_помощи | previous action name: utter_help
+[state 3] user intent: запрос_помощи | previous action name: action_listen
+[state 4] user intent: запрос_помощи | previous action name: utter_help
+[state 5] user intent: запрос_помощи | previous action name: action_listen
+[state 6] user intent: запрос_помощи | previous action name: utter_help
+[state 7] user intent: запрос_помощи | previous action name: action_listen
+[state 8] user intent: запрос_помощи | previous action name: utter_help
+[state 9] user intent: сервисная_сеть | previous action name: action_listen
+[state 10] user intent: сервисная_сеть | previous action name: utter_help
+[state 11] user intent: запрос_помощи | previous action name: action_listen
+[state 12] user intent: запрос_помощи | previous action name: utter_help
+[state 13] user intent: запрос_помощи | previous action name: action_listen
+[state 14] user intent: запрос_помощи | previous action name: utter_help
+[state 15] user intent: прощание | previous action name: action_listen
+[state 16] user intent: прощание | previous action name: utter_goodbye
+[state 17] user intent: прощание | previous action name: action_listen
+[state 18] user intent: прощание | previous action name: utter_goodbye
+[state 19] user intent: прощание | previous action name: action_listen
+[state 20] user intent: прощание | previous action name: utter_goodbye
+[state 21] user intent: прощание | previous action name: action_listen
+[state 22] user intent: прощание | previous action name: utter_goodbye
+[state 23] user intent: запрос_помощи | previous action name: action_listen
+[state 24] user intent: запрос_помощи | previous action name: utter_help
+[state 25] user intent: прощание | previous action name: action_listen
+[state 26] user intent: прощание | previous action name: utter_goodbye
+[state 27] user intent: запрос_помощи | previous action name: action_listen
+[state 28] user intent: запрос_помощи | previous action name: utter_help
+[state 29] user intent: прощание | previous action name: action_listen
+[state 30] user intent: прощание | previous action name: utter_goodbye
+[state 31] user intent: архитектурные_паттерны | previous action name: action_listen
+[state 32] user intent: архитектурные_паттерны | previous action name: utter_architecture_patterns
+[state 33] user intent: прощание | previous action name: action_listen
+[state 34] user intent: прощание | previous action name: utter_goodbye
+[state 35] user intent: запрос_помощи | previous action name: action_listen
+[state 36] user intent: запрос_помощи | previous action name: utter_help
+[state 37] user intent: прощание | previous action name: action_listen
+[state 38] user intent: прощание | previous action name: utter_goodbye
+[state 39] user intent: прощание | previous action name: action_listen
+[state 40] user intent: прощание | previous action name: utter_goodbye
+[state 41] user intent: прощание | previous action name: action_listen
+[state 42] user intent: прощание | previous action name: utter_goodbye
+[state 43] user intent: архитектурные_паттерны | previous action name: action_listen
+[state 44] user intent: архитектурные_паттерны | previous action name: utter_architecture_patterns
+2024-09-25 19:58:47 DEBUG    rasa.core.policies.rule_policy  - There is a rule for the next action 'action_listen'.
+2024-09-25 19:58:47 DEBUG    rasa.engine.graph  - Node 'run_TEDPolicy2' running 'TEDPolicy.predict_action_probabilities'.
+2024-09-25 19:58:47 DEBUG    rasa.core.policies.ted_policy  - TED predicted 'utter_help' based on user intent.
+2024-09-25 19:58:47 DEBUG    rasa.engine.graph  - Node 'select_prediction' running 'DefaultPolicyPredictionEnsemble.combine_predictions_from_kwargs'.
+2024-09-25 19:58:47 DEBUG    rasa.core.policies.ensemble  - Predicted next action using RulePolicy.
+2024-09-25 19:58:47 DEBUG    rasa.core.processor  - Predicted next action 'action_listen' with confidence 1.00.
+2024-09-25 19:58:47 DEBUG    rasa.core.processor  - [debug    ] processor.actions.policy_prediction prediction_events=[]
+2024-09-25 19:58:47 DEBUG    rasa.core.processor  - [debug    ] processor.actions.log          action_name=action_listen rasa_events=[]
+2024-09-25 19:58:47 DEBUG    rasa.core.tracker_store  - No event broker configured. Skipping streaming events.
+2024-09-25 19:58:47 DEBUG    rasa.core.lock_store  - Deleted lock for conversation 'shreyas'.
+2024-09-25 19:58:49 DEBUG    rasa.core.lock_store  - Issuing ticket for conversation 'shreyas'.
+2024-09-25 19:58:49 DEBUG    rasa.core.lock_store  - Acquiring lock for conversation 'shreyas'.
+2024-09-25 19:58:49 DEBUG    rasa.core.lock_store  - Acquired lock for conversation 'shreyas'.
+2024-09-25 19:58:49 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'shreyas'
+2024-09-25 19:58:49 DEBUG    rasa.engine.runner.dask  - Running graph with inputs: {'__message__': [<rasa.core.channels.channel.UserMessage object at 0x7faa142ff520>], '__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x7fa9c3e31970>}, targets: ['run_RegexMessageHandler'] and ExecutionContext(model_id='2cceae7bf8d4435595f0e524c9069a71', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2024-09-25 19:58:49 DEBUG    rasa.engine.graph  - Node 'nlu_message_converter' running 'NLUMessageConverter.convert_user_message'.
+2024-09-25 19:58:49 DEBUG    rasa.engine.graph  - Node 'run_WhitespaceTokenizer0' running 'WhitespaceTokenizer.process'.
+2024-09-25 19:58:49 DEBUG    rasa.engine.graph  - Node 'run_RegexFeaturizer1' running 'RegexFeaturizer.process'.
+2024-09-25 19:58:49 DEBUG    rasa.engine.graph  - Node 'run_LexicalSyntacticFeaturizer2' running 'LexicalSyntacticFeaturizer.process'.
+2024-09-25 19:58:49 DEBUG    rasa.engine.graph  - Node 'run_CountVectorsFeaturizer3' running 'CountVectorsFeaturizer.process'.
+2024-09-25 19:58:49 DEBUG    rasa.engine.graph  - Node 'run_LanguageModelFeaturizer4' running 'LanguageModelFeaturizer.process'.
+2024-09-25 19:58:49 DEBUG    rasa.engine.graph  - Node 'run_DIETClassifier5' running 'DIETClassifier.process'.
+2024-09-25 19:58:49 DEBUG    rasa.engine.graph  - Node 'run_EntitySynonymMapper6' running 'EntitySynonymMapper.process'.
+2024-09-25 19:58:49 DEBUG    rasa.engine.graph  - Node 'run_ResponseSelector7' running 'ResponseSelector.process'.
+2024-09-25 19:58:49 DEBUG    rasa.nlu.classifiers.diet_classifier  - There is no trained model for 'ResponseSelector': The component is either not trained or didn't receive enough training data.
+2024-09-25 19:58:49 DEBUG    rasa.nlu.selectors.response_selector  - Adding following selector key to message property: default
+2024-09-25 19:58:49 DEBUG    rasa.engine.graph  - Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2024-09-25 19:58:49 DEBUG    rasa.engine.graph  - Node 'run_RegexMessageHandler' running 'RegexMessageHandler.process'.
+2024-09-25 19:58:49 DEBUG    rasa.core.processor  - [debug    ] processor.message.parse        parse_data_entities=[] parse_data_intent={'name': 'архитектурные_паттерны', 'confidence': 0.06965461373329163} parse_data_text=Давай
+2024-09-25 19:58:49 DEBUG    rasa.core.processor  - Logged UserUtterance - tracker now has 114 events.
+2024-09-25 19:58:49 DEBUG    rasa.core.actions.action  - Validating extracted slots:
+2024-09-25 19:58:49 DEBUG    rasa.core.processor  - [debug    ] processor.extract.slots        action_extract_slot=action_extract_slots len_extraction_events=0 rasa_events=[]
+2024-09-25 19:58:49 DEBUG    rasa.engine.runner.dask  - Running graph with inputs: {'__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x7fa9c3e31970>}, targets: ['select_prediction'] and ExecutionContext(model_id='2cceae7bf8d4435595f0e524c9069a71', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2024-09-25 19:58:49 DEBUG    rasa.engine.graph  - Node 'rule_only_data_provider' running 'RuleOnlyDataProvider.provide'.
+2024-09-25 19:58:49 DEBUG    rasa.engine.graph  - Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2024-09-25 19:58:49 DEBUG    rasa.engine.graph  - Node 'run_MemoizationPolicy0' running 'MemoizationPolicy.predict_action_probabilities'.
+2024-09-25 19:58:49 DEBUG    rasa.core.policies.memoization  - [debug    ] memoization.predict.actions    tracker_states=[{'user': {'intent': 'запрос_помощи'}, 'prev_action': {'action_name': 'utter_help'}}, {'user': {'intent': 'архитектурные_паттерны'}, 'prev_action': {'action_name': 'action_listen'}}]
+2024-09-25 19:58:49 DEBUG    rasa.core.policies.memoization  - There is no memorised next action
+2024-09-25 19:58:49 DEBUG    rasa.engine.graph  - Node 'run_RulePolicy1' running 'RulePolicy.predict_action_probabilities'.
+2024-09-25 19:58:49 DEBUG    rasa.core.policies.rule_policy  - [debug    ] rule_policy.actions.find       current_states=
+[state 1] user intent: запрос_помощи | previous action name: action_listen
+[state 2] user intent: запрос_помощи | previous action name: utter_help
+[state 3] user intent: запрос_помощи | previous action name: action_listen
+[state 4] user intent: запрос_помощи | previous action name: utter_help
+[state 5] user intent: запрос_помощи | previous action name: action_listen
+[state 6] user intent: запрос_помощи | previous action name: utter_help
+[state 7] user intent: запрос_помощи | previous action name: action_listen
+[state 8] user intent: запрос_помощи | previous action name: utter_help
+[state 9] user intent: сервисная_сеть | previous action name: action_listen
+[state 10] user intent: сервисная_сеть | previous action name: utter_help
+[state 11] user intent: запрос_помощи | previous action name: action_listen
+[state 12] user intent: запрос_помощи | previous action name: utter_help
+[state 13] user intent: запрос_помощи | previous action name: action_listen
+[state 14] user intent: запрос_помощи | previous action name: utter_help
+[state 15] user intent: прощание | previous action name: action_listen
+[state 16] user intent: прощание | previous action name: utter_goodbye
+[state 17] user intent: прощание | previous action name: action_listen
+[state 18] user intent: прощание | previous action name: utter_goodbye
+[state 19] user intent: прощание | previous action name: action_listen
+[state 20] user intent: прощание | previous action name: utter_goodbye
+[state 21] user intent: прощание | previous action name: action_listen
+[state 22] user intent: прощание | previous action name: utter_goodbye
+[state 23] user intent: запрос_помощи | previous action name: action_listen
+[state 24] user intent: запрос_помощи | previous action name: utter_help
+[state 25] user intent: прощание | previous action name: action_listen
+[state 26] user intent: прощание | previous action name: utter_goodbye
+[state 27] user intent: запрос_помощи | previous action name: action_listen
+[state 28] user intent: запрос_помощи | previous action name: utter_help
+[state 29] user intent: прощание | previous action name: action_listen
+[state 30] user intent: прощание | previous action name: utter_goodbye
+[state 31] user intent: архитектурные_паттерны | previous action name: action_listen
+[state 32] user intent: архитектурные_паттерны | previous action name: utter_architecture_patterns
+[state 33] user intent: прощание | previous action name: action_listen
+[state 34] user intent: прощание | previous action name: utter_goodbye
+[state 35] user intent: запрос_помощи | previous action name: action_listen
+[state 36] user intent: запрос_помощи | previous action name: utter_help
+[state 37] user intent: прощание | previous action name: action_listen
+[state 38] user intent: прощание | previous action name: utter_goodbye
+[state 39] user intent: прощание | previous action name: action_listen
+[state 40] user intent: прощание | previous action name: utter_goodbye
+[state 41] user intent: прощание | previous action name: action_listen
+[state 42] user intent: прощание | previous action name: utter_goodbye
+[state 43] user intent: архитектурные_паттерны | previous action name: action_listen
+[state 44] user intent: архитектурные_паттерны | previous action name: utter_architecture_patterns
+[state 45] user text: Давай | previous action name: action_listen
+2024-09-25 19:58:49 DEBUG    rasa.core.policies.rule_policy  - There is no applicable rule.
+2024-09-25 19:58:49 DEBUG    rasa.core.policies.rule_policy  - [debug    ] rule_policy.actions.find       current_states=
+[state 1] user intent: запрос_помощи | previous action name: action_listen
+[state 2] user intent: запрос_помощи | previous action name: utter_help
+[state 3] user intent: запрос_помощи | previous action name: action_listen
+[state 4] user intent: запрос_помощи | previous action name: utter_help
+[state 5] user intent: запрос_помощи | previous action name: action_listen
+[state 6] user intent: запрос_помощи | previous action name: utter_help
+[state 7] user intent: запрос_помощи | previous action name: action_listen
+[state 8] user intent: запрос_помощи | previous action name: utter_help
+[state 9] user intent: сервисная_сеть | previous action name: action_listen
+[state 10] user intent: сервисная_сеть | previous action name: utter_help
+[state 11] user intent: запрос_помощи | previous action name: action_listen
+[state 12] user intent: запрос_помощи | previous action name: utter_help
+[state 13] user intent: запрос_помощи | previous action name: action_listen
+[state 14] user intent: запрос_помощи | previous action name: utter_help
+[state 15] user intent: прощание | previous action name: action_listen
+[state 16] user intent: прощание | previous action name: utter_goodbye
+[state 17] user intent: прощание | previous action name: action_listen
+[state 18] user intent: прощание | previous action name: utter_goodbye
+[state 19] user intent: прощание | previous action name: action_listen
+[state 20] user intent: прощание | previous action name: utter_goodbye
+[state 21] user intent: прощание | previous action name: action_listen
+[state 22] user intent: прощание | previous action name: utter_goodbye
+[state 23] user intent: запрос_помощи | previous action name: action_listen
+[state 24] user intent: запрос_помощи | previous action name: utter_help
+[state 25] user intent: прощание | previous action name: action_listen
+[state 26] user intent: прощание | previous action name: utter_goodbye
+[state 27] user intent: запрос_помощи | previous action name: action_listen
+[state 28] user intent: запрос_помощи | previous action name: utter_help
+[state 29] user intent: прощание | previous action name: action_listen
+[state 30] user intent: прощание | previous action name: utter_goodbye
+[state 31] user intent: архитектурные_паттерны | previous action name: action_listen
+[state 32] user intent: архитектурные_паттерны | previous action name: utter_architecture_patterns
+[state 33] user intent: прощание | previous action name: action_listen
+[state 34] user intent: прощание | previous action name: utter_goodbye
+[state 35] user intent: запрос_помощи | previous action name: action_listen
+[state 36] user intent: запрос_помощи | previous action name: utter_help
+[state 37] user intent: прощание | previous action name: action_listen
+[state 38] user intent: прощание | previous action name: utter_goodbye
+[state 39] user intent: прощание | previous action name: action_listen
+[state 40] user intent: прощание | previous action name: utter_goodbye
+[state 41] user intent: прощание | previous action name: action_listen
+[state 42] user intent: прощание | previous action name: utter_goodbye
+[state 43] user intent: архитектурные_паттерны | previous action name: action_listen
+[state 44] user intent: архитектурные_паттерны | previous action name: utter_architecture_patterns
+[state 45] user intent: архитектурные_паттерны | previous action name: action_listen
+2024-09-25 19:58:49 DEBUG    rasa.core.policies.rule_policy  - There is a rule for the next action 'utter_architecture_patterns'.
+2024-09-25 19:58:49 DEBUG    rasa.engine.graph  - Node 'run_TEDPolicy2' running 'TEDPolicy.predict_action_probabilities'.
+2024-09-25 19:58:49 DEBUG    rasa.core.policies.ted_policy  - TED predicted 'utter_greet' based on user intent.
+2024-09-25 19:58:49 DEBUG    rasa.engine.graph  - Node 'select_prediction' running 'DefaultPolicyPredictionEnsemble.combine_predictions_from_kwargs'.
+2024-09-25 19:58:49 DEBUG    rasa.core.policies.ensemble  - Made prediction using user intent.
+2024-09-25 19:58:49 DEBUG    rasa.core.policies.ensemble  - Added `DefinePrevUserUtteredFeaturization(False)` event.
+2024-09-25 19:58:49 DEBUG    rasa.core.policies.ensemble  - Predicted next action using RulePolicy.
+2024-09-25 19:58:49 DEBUG    rasa.core.processor  - Predicted next action 'utter_architecture_patterns' with confidence 1.00.
+2024-09-25 19:58:49 DEBUG    rasa.core.processor  - [debug    ] processor.actions.policy_prediction prediction_events=[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x7fa9c3bf2880>]
+2024-09-25 19:58:49 DEBUG    rasa.core.processor  - [debug    ] processor.actions.log          action_name=utter_architecture_patterns rasa_events=[BotUttered('Популярные архитектурные паттерны включают MVC, CQRS и Event Sourcing.', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"utter_action": "utter_architecture_patterns"}, 1727294329.6715636)]
+2024-09-25 19:58:49 DEBUG    rasa.engine.runner.dask  - Running graph with inputs: {'__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x7fa9c3e31970>}, targets: ['select_prediction'] and ExecutionContext(model_id='2cceae7bf8d4435595f0e524c9069a71', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2024-09-25 19:58:49 DEBUG    rasa.engine.graph  - Node 'rule_only_data_provider' running 'RuleOnlyDataProvider.provide'.
+2024-09-25 19:58:49 DEBUG    rasa.engine.graph  - Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2024-09-25 19:58:49 DEBUG    rasa.engine.graph  - Node 'run_MemoizationPolicy0' running 'MemoizationPolicy.predict_action_probabilities'.
+2024-09-25 19:58:49 DEBUG    rasa.core.policies.memoization  - [debug    ] memoization.predict.actions    tracker_states=[{'user': {'intent': 'запрос_помощи'}, 'prev_action': {'action_name': 'utter_help'}}, {'user': {'intent': 'запрос_помощи'}, 'prev_action': {'action_name': 'action_listen'}}]
+2024-09-25 19:58:49 DEBUG    rasa.core.policies.memoization  - There is no memorised next action
+2024-09-25 19:58:49 DEBUG    rasa.engine.graph  - Node 'run_RulePolicy1' running 'RulePolicy.predict_action_probabilities'.
+2024-09-25 19:58:49 DEBUG    rasa.core.policies.rule_policy  - [debug    ] rule_policy.actions.find       current_states=
+[state 1] user intent: запрос_помощи | previous action name: action_listen
+[state 2] user intent: запрос_помощи | previous action name: utter_help
+[state 3] user intent: запрос_помощи | previous action name: action_listen
+[state 4] user intent: запрос_помощи | previous action name: utter_help
+[state 5] user intent: запрос_помощи | previous action name: action_listen
+[state 6] user intent: запрос_помощи | previous action name: utter_help
+[state 7] user intent: запрос_помощи | previous action name: action_listen
+[state 8] user intent: запрос_помощи | previous action name: utter_help
+[state 9] user intent: сервисная_сеть | previous action name: action_listen
+[state 10] user intent: сервисная_сеть | previous action name: utter_help
+[state 11] user intent: запрос_помощи | previous action name: action_listen
+[state 12] user intent: запрос_помощи | previous action name: utter_help
+[state 13] user intent: запрос_помощи | previous action name: action_listen
+[state 14] user intent: запрос_помощи | previous action name: utter_help
+[state 15] user intent: прощание | previous action name: action_listen
+[state 16] user intent: прощание | previous action name: utter_goodbye
+[state 17] user intent: прощание | previous action name: action_listen
+[state 18] user intent: прощание | previous action name: utter_goodbye
+[state 19] user intent: прощание | previous action name: action_listen
+[state 20] user intent: прощание | previous action name: utter_goodbye
+[state 21] user intent: прощание | previous action name: action_listen
+[state 22] user intent: прощание | previous action name: utter_goodbye
+[state 23] user intent: запрос_помощи | previous action name: action_listen
+[state 24] user intent: запрос_помощи | previous action name: utter_help
+[state 25] user intent: прощание | previous action name: action_listen
+[state 26] user intent: прощание | previous action name: utter_goodbye
+[state 27] user intent: запрос_помощи | previous action name: action_listen
+[state 28] user intent: запрос_помощи | previous action name: utter_help
+[state 29] user intent: прощание | previous action name: action_listen
+[state 30] user intent: прощание | previous action name: utter_goodbye
+[state 31] user intent: архитектурные_паттерны | previous action name: action_listen
+[state 32] user intent: архитектурные_паттерны | previous action name: utter_architecture_patterns
+[state 33] user intent: прощание | previous action name: action_listen
+[state 34] user intent: прощание | previous action name: utter_goodbye
+[state 35] user intent: запрос_помощи | previous action name: action_listen
+[state 36] user intent: запрос_помощи | previous action name: utter_help
+[state 37] user intent: прощание | previous action name: action_listen
+[state 38] user intent: прощание | previous action name: utter_goodbye
+[state 39] user intent: прощание | previous action name: action_listen
+[state 40] user intent: прощание | previous action name: utter_goodbye
+[state 41] user intent: прощание | previous action name: action_listen
+[state 42] user intent: прощание | previous action name: utter_goodbye
+[state 43] user intent: архитектурные_паттерны | previous action name: action_listen
+[state 44] user intent: архитектурные_паттерны | previous action name: utter_architecture_patterns
+[state 45] user intent: архитектурные_паттерны | previous action name: action_listen
+[state 46] user intent: архитектурные_паттерны | previous action name: utter_architecture_patterns
+2024-09-25 19:58:49 DEBUG    rasa.core.policies.rule_policy  - There is a rule for the next action 'action_listen'.
+2024-09-25 19:58:49 DEBUG    rasa.engine.graph  - Node 'run_TEDPolicy2' running 'TEDPolicy.predict_action_probabilities'.
+2024-09-25 19:58:49 DEBUG    rasa.core.policies.ted_policy  - TED predicted 'utter_help' based on user intent.
+2024-09-25 19:58:49 DEBUG    rasa.engine.graph  - Node 'select_prediction' running 'DefaultPolicyPredictionEnsemble.combine_predictions_from_kwargs'.
+2024-09-25 19:58:49 DEBUG    rasa.core.policies.ensemble  - Predicted next action using RulePolicy.
+2024-09-25 19:58:49 DEBUG    rasa.core.processor  - Predicted next action 'action_listen' with confidence 1.00.
+2024-09-25 19:58:49 DEBUG    rasa.core.processor  - [debug    ] processor.actions.policy_prediction prediction_events=[]
+2024-09-25 19:58:49 DEBUG    rasa.core.processor  - [debug    ] processor.actions.log          action_name=action_listen rasa_events=[]
+2024-09-25 19:58:49 DEBUG    rasa.core.tracker_store  - No event broker configured. Skipping streaming events.
+2024-09-25 19:58:49 DEBUG    rasa.core.lock_store  - Deleted lock for conversation 'shreyas'.
+2024-09-25 19:58:52 DEBUG    rasa.core.lock_store  - Issuing ticket for conversation 'shreyas'.
+2024-09-25 19:58:52 DEBUG    rasa.core.lock_store  - Acquiring lock for conversation 'shreyas'.
+2024-09-25 19:58:52 DEBUG    rasa.core.lock_store  - Acquired lock for conversation 'shreyas'.
+2024-09-25 19:58:52 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'shreyas'
+2024-09-25 19:58:52 DEBUG    rasa.engine.runner.dask  - Running graph with inputs: {'__message__': [<rasa.core.channels.channel.UserMessage object at 0x7fa9ab4f5d00>], '__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x7fa9c3e31970>}, targets: ['run_RegexMessageHandler'] and ExecutionContext(model_id='2cceae7bf8d4435595f0e524c9069a71', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2024-09-25 19:58:52 DEBUG    rasa.engine.graph  - Node 'nlu_message_converter' running 'NLUMessageConverter.convert_user_message'.
+2024-09-25 19:58:52 DEBUG    rasa.engine.graph  - Node 'run_WhitespaceTokenizer0' running 'WhitespaceTokenizer.process'.
+2024-09-25 19:58:52 DEBUG    rasa.engine.graph  - Node 'run_RegexFeaturizer1' running 'RegexFeaturizer.process'.
+2024-09-25 19:58:52 DEBUG    rasa.engine.graph  - Node 'run_LexicalSyntacticFeaturizer2' running 'LexicalSyntacticFeaturizer.process'.
+2024-09-25 19:58:52 DEBUG    rasa.engine.graph  - Node 'run_CountVectorsFeaturizer3' running 'CountVectorsFeaturizer.process'.
+2024-09-25 19:58:52 DEBUG    rasa.engine.graph  - Node 'run_LanguageModelFeaturizer4' running 'LanguageModelFeaturizer.process'.
+2024-09-25 19:58:52 DEBUG    rasa.engine.graph  - Node 'run_DIETClassifier5' running 'DIETClassifier.process'.
+2024-09-25 19:58:52 DEBUG    rasa.engine.graph  - Node 'run_EntitySynonymMapper6' running 'EntitySynonymMapper.process'.
+2024-09-25 19:58:52 DEBUG    rasa.engine.graph  - Node 'run_ResponseSelector7' running 'ResponseSelector.process'.
+2024-09-25 19:58:52 DEBUG    rasa.nlu.classifiers.diet_classifier  - There is no trained model for 'ResponseSelector': The component is either not trained or didn't receive enough training data.
+2024-09-25 19:58:52 DEBUG    rasa.nlu.selectors.response_selector  - Adding following selector key to message property: default
+2024-09-25 19:58:52 DEBUG    rasa.engine.graph  - Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2024-09-25 19:58:52 DEBUG    rasa.engine.graph  - Node 'run_RegexMessageHandler' running 'RegexMessageHandler.process'.
+2024-09-25 19:58:52 DEBUG    rasa.core.processor  - [debug    ] processor.message.parse        parse_data_entities=[] parse_data_intent={'name': 'архитектурные_паттерны', 'confidence': 0.0705721452832222} parse_data_text=Зачем?
+2024-09-25 19:58:52 DEBUG    rasa.core.processor  - Logged UserUtterance - tracker now has 119 events.
+2024-09-25 19:58:52 DEBUG    rasa.core.actions.action  - Validating extracted slots:
+2024-09-25 19:58:52 DEBUG    rasa.core.processor  - [debug    ] processor.extract.slots        action_extract_slot=action_extract_slots len_extraction_events=0 rasa_events=[]
+2024-09-25 19:58:52 DEBUG    rasa.engine.runner.dask  - Running graph with inputs: {'__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x7fa9c3e31970>}, targets: ['select_prediction'] and ExecutionContext(model_id='2cceae7bf8d4435595f0e524c9069a71', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2024-09-25 19:58:52 DEBUG    rasa.engine.graph  - Node 'rule_only_data_provider' running 'RuleOnlyDataProvider.provide'.
+2024-09-25 19:58:52 DEBUG    rasa.engine.graph  - Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2024-09-25 19:58:52 DEBUG    rasa.engine.graph  - Node 'run_MemoizationPolicy0' running 'MemoizationPolicy.predict_action_probabilities'.
+2024-09-25 19:58:52 DEBUG    rasa.core.policies.memoization  - [debug    ] memoization.predict.actions    tracker_states=[{'user': {'intent': 'запрос_помощи'}, 'prev_action': {'action_name': 'utter_help'}}, {'user': {'intent': 'архитектурные_паттерны'}, 'prev_action': {'action_name': 'action_listen'}}]
+2024-09-25 19:58:52 DEBUG    rasa.core.policies.memoization  - There is no memorised next action
+2024-09-25 19:58:52 DEBUG    rasa.engine.graph  - Node 'run_RulePolicy1' running 'RulePolicy.predict_action_probabilities'.
+2024-09-25 19:58:52 DEBUG    rasa.core.policies.rule_policy  - [debug    ] rule_policy.actions.find       current_states=
+[state 1] user intent: запрос_помощи | previous action name: action_listen
+[state 2] user intent: запрос_помощи | previous action name: utter_help
+[state 3] user intent: запрос_помощи | previous action name: action_listen
+[state 4] user intent: запрос_помощи | previous action name: utter_help
+[state 5] user intent: запрос_помощи | previous action name: action_listen
+[state 6] user intent: запрос_помощи | previous action name: utter_help
+[state 7] user intent: запрос_помощи | previous action name: action_listen
+[state 8] user intent: запрос_помощи | previous action name: utter_help
+[state 9] user intent: сервисная_сеть | previous action name: action_listen
+[state 10] user intent: сервисная_сеть | previous action name: utter_help
+[state 11] user intent: запрос_помощи | previous action name: action_listen
+[state 12] user intent: запрос_помощи | previous action name: utter_help
+[state 13] user intent: запрос_помощи | previous action name: action_listen
+[state 14] user intent: запрос_помощи | previous action name: utter_help
+[state 15] user intent: прощание | previous action name: action_listen
+[state 16] user intent: прощание | previous action name: utter_goodbye
+[state 17] user intent: прощание | previous action name: action_listen
+[state 18] user intent: прощание | previous action name: utter_goodbye
+[state 19] user intent: прощание | previous action name: action_listen
+[state 20] user intent: прощание | previous action name: utter_goodbye
+[state 21] user intent: прощание | previous action name: action_listen
+[state 22] user intent: прощание | previous action name: utter_goodbye
+[state 23] user intent: запрос_помощи | previous action name: action_listen
+[state 24] user intent: запрос_помощи | previous action name: utter_help
+[state 25] user intent: прощание | previous action name: action_listen
+[state 26] user intent: прощание | previous action name: utter_goodbye
+[state 27] user intent: запрос_помощи | previous action name: action_listen
+[state 28] user intent: запрос_помощи | previous action name: utter_help
+[state 29] user intent: прощание | previous action name: action_listen
+[state 30] user intent: прощание | previous action name: utter_goodbye
+[state 31] user intent: архитектурные_паттерны | previous action name: action_listen
+[state 32] user intent: архитектурные_паттерны | previous action name: utter_architecture_patterns
+[state 33] user intent: прощание | previous action name: action_listen
+[state 34] user intent: прощание | previous action name: utter_goodbye
+[state 35] user intent: запрос_помощи | previous action name: action_listen
+[state 36] user intent: запрос_помощи | previous action name: utter_help
+[state 37] user intent: прощание | previous action name: action_listen
+[state 38] user intent: прощание | previous action name: utter_goodbye
+[state 39] user intent: прощание | previous action name: action_listen
+[state 40] user intent: прощание | previous action name: utter_goodbye
+[state 41] user intent: прощание | previous action name: action_listen
+[state 42] user intent: прощание | previous action name: utter_goodbye
+[state 43] user intent: архитектурные_паттерны | previous action name: action_listen
+[state 44] user intent: архитектурные_паттерны | previous action name: utter_architecture_patterns
+[state 45] user intent: архитектурные_паттерны | previous action name: action_listen
+[state 46] user intent: архитектурные_паттерны | previous action name: utter_architecture_patterns
+[state 47] user text: Зачем? | previous action name: action_listen
+2024-09-25 19:58:52 DEBUG    rasa.core.policies.rule_policy  - There is no applicable rule.
+2024-09-25 19:58:52 DEBUG    rasa.core.policies.rule_policy  - [debug    ] rule_policy.actions.find       current_states=
+[state 1] user intent: запрос_помощи | previous action name: action_listen
+[state 2] user intent: запрос_помощи | previous action name: utter_help
+[state 3] user intent: запрос_помощи | previous action name: action_listen
+[state 4] user intent: запрос_помощи | previous action name: utter_help
+[state 5] user intent: запрос_помощи | previous action name: action_listen
+[state 6] user intent: запрос_помощи | previous action name: utter_help
+[state 7] user intent: запрос_помощи | previous action name: action_listen
+[state 8] user intent: запрос_помощи | previous action name: utter_help
+[state 9] user intent: сервисная_сеть | previous action name: action_listen
+[state 10] user intent: сервисная_сеть | previous action name: utter_help
+[state 11] user intent: запрос_помощи | previous action name: action_listen
+[state 12] user intent: запрос_помощи | previous action name: utter_help
+[state 13] user intent: запрос_помощи | previous action name: action_listen
+[state 14] user intent: запрос_помощи | previous action name: utter_help
+[state 15] user intent: прощание | previous action name: action_listen
+[state 16] user intent: прощание | previous action name: utter_goodbye
+[state 17] user intent: прощание | previous action name: action_listen
+[state 18] user intent: прощание | previous action name: utter_goodbye
+[state 19] user intent: прощание | previous action name: action_listen
+[state 20] user intent: прощание | previous action name: utter_goodbye
+[state 21] user intent: прощание | previous action name: action_listen
+[state 22] user intent: прощание | previous action name: utter_goodbye
+[state 23] user intent: запрос_помощи | previous action name: action_listen
+[state 24] user intent: запрос_помощи | previous action name: utter_help
+[state 25] user intent: прощание | previous action name: action_listen
+[state 26] user intent: прощание | previous action name: utter_goodbye
+[state 27] user intent: запрос_помощи | previous action name: action_listen
+[state 28] user intent: запрос_помощи | previous action name: utter_help
+[state 29] user intent: прощание | previous action name: action_listen
+[state 30] user intent: прощание | previous action name: utter_goodbye
+[state 31] user intent: архитектурные_паттерны | previous action name: action_listen
+[state 32] user intent: архитектурные_паттерны | previous action name: utter_architecture_patterns
+[state 33] user intent: прощание | previous action name: action_listen
+[state 34] user intent: прощание | previous action name: utter_goodbye
+[state 35] user intent: запрос_помощи | previous action name: action_listen
+[state 36] user intent: запрос_помощи | previous action name: utter_help
+[state 37] user intent: прощание | previous action name: action_listen
+[state 38] user intent: прощание | previous action name: utter_goodbye
+[state 39] user intent: прощание | previous action name: action_listen
+[state 40] user intent: прощание | previous action name: utter_goodbye
+[state 41] user intent: прощание | previous action name: action_listen
+[state 42] user intent: прощание | previous action name: utter_goodbye
+[state 43] user intent: архитектурные_паттерны | previous action name: action_listen
+[state 44] user intent: архитектурные_паттерны | previous action name: utter_architecture_patterns
+[state 45] user intent: архитектурные_паттерны | previous action name: action_listen
+[state 46] user intent: архитектурные_паттерны | previous action name: utter_architecture_patterns
+[state 47] user intent: архитектурные_паттерны | previous action name: action_listen
+2024-09-25 19:58:52 DEBUG    rasa.core.policies.rule_policy  - There is a rule for the next action 'utter_architecture_patterns'.
+2024-09-25 19:58:52 DEBUG    rasa.engine.graph  - Node 'run_TEDPolicy2' running 'TEDPolicy.predict_action_probabilities'.
+2024-09-25 19:58:52 DEBUG    rasa.core.policies.ted_policy  - TED predicted 'utter_greet' based on user intent.
+2024-09-25 19:58:52 DEBUG    rasa.engine.graph  - Node 'select_prediction' running 'DefaultPolicyPredictionEnsemble.combine_predictions_from_kwargs'.
+2024-09-25 19:58:52 DEBUG    rasa.core.policies.ensemble  - Made prediction using user intent.
+2024-09-25 19:58:52 DEBUG    rasa.core.policies.ensemble  - Added `DefinePrevUserUtteredFeaturization(False)` event.
+2024-09-25 19:58:52 DEBUG    rasa.core.policies.ensemble  - Predicted next action using RulePolicy.
+2024-09-25 19:58:52 DEBUG    rasa.core.processor  - Predicted next action 'utter_architecture_patterns' with confidence 1.00.
+2024-09-25 19:58:52 DEBUG    rasa.core.processor  - [debug    ] processor.actions.policy_prediction prediction_events=[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x7fa9aabf6ac0>]
+2024-09-25 19:58:52 DEBUG    rasa.core.processor  - [debug    ] processor.actions.log          action_name=utter_architecture_patterns rasa_events=[BotUttered('Популярные архитектурные паттерны включают MVC, CQRS и Event Sourcing.', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"utter_action": "utter_architecture_patterns"}, 1727294332.220495)]
+2024-09-25 19:58:52 DEBUG    rasa.engine.runner.dask  - Running graph with inputs: {'__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x7fa9c3e31970>}, targets: ['select_prediction'] and ExecutionContext(model_id='2cceae7bf8d4435595f0e524c9069a71', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2024-09-25 19:58:52 DEBUG    rasa.engine.graph  - Node 'rule_only_data_provider' running 'RuleOnlyDataProvider.provide'.
+2024-09-25 19:58:52 DEBUG    rasa.engine.graph  - Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2024-09-25 19:58:52 DEBUG    rasa.engine.graph  - Node 'run_MemoizationPolicy0' running 'MemoizationPolicy.predict_action_probabilities'.
+2024-09-25 19:58:52 DEBUG    rasa.core.policies.memoization  - [debug    ] memoization.predict.actions    tracker_states=[{'user': {'intent': 'запрос_помощи'}, 'prev_action': {'action_name': 'utter_help'}}, {'user': {'intent': 'запрос_помощи'}, 'prev_action': {'action_name': 'action_listen'}}]
+2024-09-25 19:58:52 DEBUG    rasa.core.policies.memoization  - There is no memorised next action
+2024-09-25 19:58:52 DEBUG    rasa.engine.graph  - Node 'run_RulePolicy1' running 'RulePolicy.predict_action_probabilities'.
+2024-09-25 19:58:52 DEBUG    rasa.core.policies.rule_policy  - [debug    ] rule_policy.actions.find       current_states=
+[state 1] user intent: запрос_помощи | previous action name: action_listen
+[state 2] user intent: запрос_помощи | previous action name: utter_help
+[state 3] user intent: запрос_помощи | previous action name: action_listen
+[state 4] user intent: запрос_помощи | previous action name: utter_help
+[state 5] user intent: запрос_помощи | previous action name: action_listen
+[state 6] user intent: запрос_помощи | previous action name: utter_help
+[state 7] user intent: запрос_помощи | previous action name: action_listen
+[state 8] user intent: запрос_помощи | previous action name: utter_help
+[state 9] user intent: сервисная_сеть | previous action name: action_listen
+[state 10] user intent: сервисная_сеть | previous action name: utter_help
+[state 11] user intent: запрос_помощи | previous action name: action_listen
+[state 12] user intent: запрос_помощи | previous action name: utter_help
+[state 13] user intent: запрос_помощи | previous action name: action_listen
+[state 14] user intent: запрос_помощи | previous action name: utter_help
+[state 15] user intent: прощание | previous action name: action_listen
+[state 16] user intent: прощание | previous action name: utter_goodbye
+[state 17] user intent: прощание | previous action name: action_listen
+[state 18] user intent: прощание | previous action name: utter_goodbye
+[state 19] user intent: прощание | previous action name: action_listen
+[state 20] user intent: прощание | previous action name: utter_goodbye
+[state 21] user intent: прощание | previous action name: action_listen
+[state 22] user intent: прощание | previous action name: utter_goodbye
+[state 23] user intent: запрос_помощи | previous action name: action_listen
+[state 24] user intent: запрос_помощи | previous action name: utter_help
+[state 25] user intent: прощание | previous action name: action_listen
+[state 26] user intent: прощание | previous action name: utter_goodbye
+[state 27] user intent: запрос_помощи | previous action name: action_listen
+[state 28] user intent: запрос_помощи | previous action name: utter_help
+[state 29] user intent: прощание | previous action name: action_listen
+[state 30] user intent: прощание | previous action name: utter_goodbye
+[state 31] user intent: архитектурные_паттерны | previous action name: action_listen
+[state 32] user intent: архитектурные_паттерны | previous action name: utter_architecture_patterns
+[state 33] user intent: прощание | previous action name: action_listen
+[state 34] user intent: прощание | previous action name: utter_goodbye
+[state 35] user intent: запрос_помощи | previous action name: action_listen
+[state 36] user intent: запрос_помощи | previous action name: utter_help
+[state 37] user intent: прощание | previous action name: action_listen
+[state 38] user intent: прощание | previous action name: utter_goodbye
+[state 39] user intent: прощание | previous action name: action_listen
+[state 40] user intent: прощание | previous action name: utter_goodbye
+[state 41] user intent: прощание | previous action name: action_listen
+[state 42] user intent: прощание | previous action name: utter_goodbye
+[state 43] user intent: архитектурные_паттерны | previous action name: action_listen
+[state 44] user intent: архитектурные_паттерны | previous action name: utter_architecture_patterns
+[state 45] user intent: архитектурные_паттерны | previous action name: action_listen
+[state 46] user intent: архитектурные_паттерны | previous action name: utter_architecture_patterns
+[state 47] user intent: архитектурные_паттерны | previous action name: action_listen
+[state 48] user intent: архитектурные_паттерны | previous action name: utter_architecture_patterns
+2024-09-25 19:58:52 DEBUG    rasa.core.policies.rule_policy  - There is a rule for the next action 'action_listen'.
+2024-09-25 19:58:52 DEBUG    rasa.engine.graph  - Node 'run_TEDPolicy2' running 'TEDPolicy.predict_action_probabilities'.
+2024-09-25 19:58:52 DEBUG    rasa.core.policies.ted_policy  - TED predicted 'utter_help' based on user intent.
+2024-09-25 19:58:52 DEBUG    rasa.engine.graph  - Node 'select_prediction' running 'DefaultPolicyPredictionEnsemble.combine_predictions_from_kwargs'.
+2024-09-25 19:58:52 DEBUG    rasa.core.policies.ensemble  - Predicted next action using RulePolicy.
+2024-09-25 19:58:52 DEBUG    rasa.core.processor  - Predicted next action 'action_listen' with confidence 1.00.
+2024-09-25 19:58:52 DEBUG    rasa.core.processor  - [debug    ] processor.actions.policy_prediction prediction_events=[]
+2024-09-25 19:58:52 DEBUG    rasa.core.processor  - [debug    ] processor.actions.log          action_name=action_listen rasa_events=[]
+2024-09-25 19:58:52 DEBUG    rasa.core.tracker_store  - No event broker configured. Skipping streaming events.
+2024-09-25 19:58:52 DEBUG    rasa.core.lock_store  - Deleted lock for conversation 'shreyas'.
